@@ -34,10 +34,7 @@
         if (i == 3) {
             imageView.userInteractionEnabled = YES;
             UIButton *btn = [UIButton buttonWithType:UIButtonTypeSystem];
-            btn.frame = CGRectMake(XPScreenWidth/2 - 130, XPScreenHeight * 0.8, 260, 70);
-            [btn setBackgroundColor:[UIColor colorWithRed:252/255.0 green:82/255.0 blue:47/255.0 alpha:1]];
-            btn.titleLabel.font = [UIFont systemFontOfSize:18];
-            btn.titleLabel.textAlignment = NSTextAlignmentCenter;
+            btn.frame = CGRectMake(XPScreenWidth/2 - 130, XPScreenHeight * 0.83, 260, 70);
             [btn addTarget:self action:@selector(enter:) forControlEvents:UIControlEventTouchUpInside];
             [imageView addSubview:btn];
         }

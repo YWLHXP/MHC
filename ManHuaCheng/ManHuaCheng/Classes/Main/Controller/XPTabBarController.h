@@ -1,5 +1,5 @@
 //
-//  AppDelegate.h
+//  XPTabBarController.h
 //  ManHuaCheng
 //
 //  Created by dragon on 16/6/28.
@@ -8,9 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
-
-@property (strong, nonatomic) UIWindow *window;
+@interface XPTabBarController : UITabBarController
 
 @end
-

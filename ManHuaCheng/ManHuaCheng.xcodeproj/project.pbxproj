@@ -78,6 +78,7 @@
 		D8500EE61D2267830007D0F6 /* 3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D8500EDA1D2267830007D0F6 /* 3.jpg */; };
 		D8500EE71D2267830007D0F6 /* 4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D8500EDB1D2267830007D0F6 /* 4.jpg */; };
 		D8500EEE1D22682D0007D0F6 /* XPWelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8500EED1D22682D0007D0F6 /* XPWelcomeViewController.m */; };
+		D87B2F431D2270D7002FF8F4 /* XPTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = D87B2F421D2270D7002FF8F4 /* XPTabBarController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -158,6 +159,8 @@
 		D8500EEC1D22682D0007D0F6 /* XPWelcomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPWelcomeViewController.h; sourceTree = "<group>"; };
 		D8500EED1D22682D0007D0F6 /* XPWelcomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPWelcomeViewController.m; sourceTree = "<group>"; };
 		D8500EEF1D2268840007D0F6 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		D87B2F411D2270D7002FF8F4 /* XPTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPTabBarController.h; sourceTree = "<group>"; };
+		D87B2F421D2270D7002FF8F4 /* XPTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPTabBarController.m; sourceTree = "<group>"; };
 		E93C1B54920AE1A617674E54 /* Pods-ManHuaCheng.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ManHuaCheng.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ManHuaCheng/Pods-ManHuaCheng.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -353,6 +356,8 @@
 		D85009371D2262FA0007D0F6 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				D87B2F411D2270D7002FF8F4 /* XPTabBarController.h */,
+				D87B2F421D2270D7002FF8F4 /* XPTabBarController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -760,6 +765,7 @@
 				D8500EEE1D22682D0007D0F6 /* XPWelcomeViewController.m in Sources */,
 				D85009421D2262FA0007D0F6 /* AppDelegate.m in Sources */,
 				D850090C1D2251730007D0F6 /* main.m in Sources */,
+				D87B2F431D2270D7002FF8F4 /* XPTabBarController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
