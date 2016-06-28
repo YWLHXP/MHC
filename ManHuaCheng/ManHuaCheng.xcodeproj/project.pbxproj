@@ -7,13 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		79DB85F4E9C6B5A36FDD5E74 /* libPods-ManHuaCheng.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 71049E0322356E97FFBD99C3 /* libPods-ManHuaCheng.a */; };
 		D850090C1D2251730007D0F6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D850090B1D2251730007D0F6 /* main.m */; };
 		D850090F1D2251730007D0F6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D850090E1D2251730007D0F6 /* AppDelegate.m */; };
 		D85009171D2251730007D0F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D85009161D2251730007D0F6 /* Assets.xcassets */; };
 		D850091A1D2251730007D0F6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D85009181D2251730007D0F6 /* LaunchScreen.storyboard */; };
+		D85009261D225FA70007D0F6 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = D85009251D225FA70007D0F6 /* Podfile */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		31FFD4E0CC863556744B4DB5 /* Pods-ManHuaCheng.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ManHuaCheng.release.xcconfig"; path = "Pods/Target Support Files/Pods-ManHuaCheng/Pods-ManHuaCheng.release.xcconfig"; sourceTree = "<group>"; };
+		71049E0322356E97FFBD99C3 /* libPods-ManHuaCheng.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ManHuaCheng.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D85009071D2251730007D0F6 /* ManHuaCheng.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ManHuaCheng.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D850090B1D2251730007D0F6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D850090D1D2251730007D0F6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -21,6 +25,8 @@
 		D85009161D2251730007D0F6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D85009191D2251730007D0F6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D850091B1D2251730007D0F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D85009251D225FA70007D0F6 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		E93C1B54920AE1A617674E54 /* Pods-ManHuaCheng.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ManHuaCheng.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ManHuaCheng/Pods-ManHuaCheng.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -28,17 +34,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79DB85F4E9C6B5A36FDD5E74 /* libPods-ManHuaCheng.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		61B21E9AB8BEC4AC5546C87B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				71049E0322356E97FFBD99C3 /* libPods-ManHuaCheng.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7D78B7311C729E3907D8B36F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E93C1B54920AE1A617674E54 /* Pods-ManHuaCheng.debug.xcconfig */,
+				31FFD4E0CC863556744B4DB5 /* Pods-ManHuaCheng.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		D85008FE1D2251730007D0F6 = {
 			isa = PBXGroup;
 			children = (
+				D85009251D225FA70007D0F6 /* Podfile */,
 				D85009091D2251730007D0F6 /* ManHuaCheng */,
 				D85009081D2251730007D0F6 /* Products */,
+				7D78B7311C729E3907D8B36F /* Pods */,
+				61B21E9AB8BEC4AC5546C87B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -78,9 +105,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D850091E1D2251730007D0F6 /* Build configuration list for PBXNativeTarget "ManHuaCheng" */;
 			buildPhases = (
+				EE5238950B1A2996B124247C /* [CP] Check Pods Manifest.lock */,
 				D85009031D2251730007D0F6 /* Sources */,
 				D85009041D2251730007D0F6 /* Frameworks */,
 				D85009051D2251730007D0F6 /* Resources */,
+				B7995C75E67F04B61C68E244 /* [CP] Embed Pods Frameworks */,
+				BEE8FBFBBE084C326B1F7334 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -129,12 +159,61 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D85009261D225FA70007D0F6 /* Podfile in Resources */,
 				D850091A1D2251730007D0F6 /* LaunchScreen.storyboard in Resources */,
 				D85009171D2251730007D0F6 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B7995C75E67F04B61C68E244 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ManHuaCheng/Pods-ManHuaCheng-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BEE8FBFBBE084C326B1F7334 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ManHuaCheng/Pods-ManHuaCheng-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EE5238950B1A2996B124247C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D85009031D2251730007D0F6 /* Sources */ = {
@@ -244,6 +323,7 @@
 		};
 		D850091F1D2251730007D0F6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E93C1B54920AE1A617674E54 /* Pods-ManHuaCheng.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ManHuaCheng/Info.plist;
@@ -255,6 +335,7 @@
 		};
 		D85009201D2251730007D0F6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 31FFD4E0CC863556744B4DB5 /* Pods-ManHuaCheng.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ManHuaCheng/Info.plist;
@@ -283,6 +364,7 @@
 				D85009201D2251730007D0F6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
