@@ -79,6 +79,16 @@
 		D8500EE71D2267830007D0F6 /* 4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D8500EDB1D2267830007D0F6 /* 4.jpg */; };
 		D8500EEE1D22682D0007D0F6 /* XPWelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8500EED1D22682D0007D0F6 /* XPWelcomeViewController.m */; };
 		D87B2F431D2270D7002FF8F4 /* XPTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = D87B2F421D2270D7002FF8F4 /* XPTabBarController.m */; };
+		D87B2F471D2272AE002FF8F4 /* XPMineTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = D87B2F451D2272AE002FF8F4 /* XPMineTableController.m */; };
+		D87B2F481D2272AE002FF8F4 /* XPMineTableController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D87B2F461D2272AE002FF8F4 /* XPMineTableController.xib */; };
+		D87B2F551D22738C002FF8F4 /* XPBookrackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D87B2F541D22738C002FF8F4 /* XPBookrackViewController.m */; };
+		D87B2F591D2273B2002FF8F4 /* XPSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D87B2F581D2273B2002FF8F4 /* XPSearchViewController.m */; };
+		D87B2F5C1D2273E8002FF8F4 /* XPCicleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D87B2F5B1D2273E8002FF8F4 /* XPCicleViewController.m */; };
+		D87B2F5F1D227406002FF8F4 /* XPBookcityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D87B2F5E1D227406002FF8F4 /* XPBookcityViewController.m */; };
+		D87B2F651D227772002FF8F4 /* XPTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = D87B2F641D227772002FF8F4 /* XPTabBar.m */; };
+		D87B2F691D227CDB002FF8F4 /* tiantiansifangmao-04.png in Resources */ = {isa = PBXBuildFile; fileRef = D87B2F661D227CDB002FF8F4 /* tiantiansifangmao-04.png */; };
+		D87B2F6A1D227CDB002FF8F4 /* tiantiansifangmao-04@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D87B2F671D227CDB002FF8F4 /* tiantiansifangmao-04@2x.png */; };
+		D87B2F6B1D227CDB002FF8F4 /* tiantiansifangmao-04@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D87B2F681D227CDB002FF8F4 /* tiantiansifangmao-04@3x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -161,6 +171,22 @@
 		D8500EEF1D2268840007D0F6 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		D87B2F411D2270D7002FF8F4 /* XPTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPTabBarController.h; sourceTree = "<group>"; };
 		D87B2F421D2270D7002FF8F4 /* XPTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPTabBarController.m; sourceTree = "<group>"; };
+		D87B2F441D2272AE002FF8F4 /* XPMineTableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPMineTableController.h; sourceTree = "<group>"; };
+		D87B2F451D2272AE002FF8F4 /* XPMineTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPMineTableController.m; sourceTree = "<group>"; };
+		D87B2F461D2272AE002FF8F4 /* XPMineTableController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XPMineTableController.xib; sourceTree = "<group>"; };
+		D87B2F531D22738C002FF8F4 /* XPBookrackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPBookrackViewController.h; sourceTree = "<group>"; };
+		D87B2F541D22738C002FF8F4 /* XPBookrackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPBookrackViewController.m; sourceTree = "<group>"; };
+		D87B2F571D2273B2002FF8F4 /* XPSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPSearchViewController.h; sourceTree = "<group>"; };
+		D87B2F581D2273B2002FF8F4 /* XPSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPSearchViewController.m; sourceTree = "<group>"; };
+		D87B2F5A1D2273E8002FF8F4 /* XPCicleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPCicleViewController.h; sourceTree = "<group>"; };
+		D87B2F5B1D2273E8002FF8F4 /* XPCicleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPCicleViewController.m; sourceTree = "<group>"; };
+		D87B2F5D1D227406002FF8F4 /* XPBookcityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPBookcityViewController.h; sourceTree = "<group>"; };
+		D87B2F5E1D227406002FF8F4 /* XPBookcityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPBookcityViewController.m; sourceTree = "<group>"; };
+		D87B2F631D227772002FF8F4 /* XPTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPTabBar.h; sourceTree = "<group>"; };
+		D87B2F641D227772002FF8F4 /* XPTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPTabBar.m; sourceTree = "<group>"; };
+		D87B2F661D227CDB002FF8F4 /* tiantiansifangmao-04.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tiantiansifangmao-04.png"; sourceTree = "<group>"; };
+		D87B2F671D227CDB002FF8F4 /* tiantiansifangmao-04@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tiantiansifangmao-04@2x.png"; sourceTree = "<group>"; };
+		D87B2F681D227CDB002FF8F4 /* tiantiansifangmao-04@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tiantiansifangmao-04@3x.png"; sourceTree = "<group>"; };
 		E93C1B54920AE1A617674E54 /* Pods-ManHuaCheng.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ManHuaCheng.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ManHuaCheng/Pods-ManHuaCheng.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -261,6 +287,8 @@
 		D85009291D2262FA0007D0F6 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				D87B2F5D1D227406002FF8F4 /* XPBookcityViewController.h */,
+				D87B2F5E1D227406002FF8F4 /* XPBookcityViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -292,6 +320,8 @@
 		D850092D1D2262FA0007D0F6 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				D87B2F531D22738C002FF8F4 /* XPBookrackViewController.h */,
+				D87B2F541D22738C002FF8F4 /* XPBookrackViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -323,6 +353,8 @@
 		D85009311D2262FA0007D0F6 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				D87B2F5A1D2273E8002FF8F4 /* XPCicleViewController.h */,
+				D87B2F5B1D2273E8002FF8F4 /* XPCicleViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -372,6 +404,8 @@
 		D85009391D2262FA0007D0F6 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				D87B2F631D227772002FF8F4 /* XPTabBar.h */,
+				D87B2F641D227772002FF8F4 /* XPTabBar.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -389,6 +423,9 @@
 		D850093B1D2262FA0007D0F6 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				D87B2F441D2272AE002FF8F4 /* XPMineTableController.h */,
+				D87B2F451D2272AE002FF8F4 /* XPMineTableController.m */,
+				D87B2F461D2272AE002FF8F4 /* XPMineTableController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -420,6 +457,8 @@
 		D850093F1D2262FA0007D0F6 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				D87B2F571D2273B2002FF8F4 /* XPSearchViewController.h */,
+				D87B2F581D2273B2002FF8F4 /* XPSearchViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -476,6 +515,9 @@
 				D850095A1D2263680007D0F6 /* katongxiaodongwu_20@3x.png */,
 				D850095B1D2263680007D0F6 /* katongxiaodongwu_20_n@2x.png */,
 				D850095C1D2263680007D0F6 /* katongxiaodongwu_20_n@3x.png */,
+				D87B2F661D227CDB002FF8F4 /* tiantiansifangmao-04.png */,
+				D87B2F671D227CDB002FF8F4 /* tiantiansifangmao-04@2x.png */,
+				D87B2F681D227CDB002FF8F4 /* tiantiansifangmao-04@3x.png */,
 			);
 			path = tabbar;
 			sourceTree = "<group>";
@@ -648,7 +690,9 @@
 				D850096A1D2263680007D0F6 /* katongxiaodongwu_03@2x.png in Resources */,
 				D85009661D2263680007D0F6 /* katongxiaodongwu_01_n.png in Resources */,
 				D85009691D2263680007D0F6 /* katongxiaodongwu_03.png in Resources */,
+				D87B2F481D2272AE002FF8F4 /* XPMineTableController.xib in Resources */,
 				D8500EE11D2267830007D0F6 /* 2.jpg in Resources */,
+				D87B2F691D227CDB002FF8F4 /* tiantiansifangmao-04.png in Resources */,
 				D85009601D2263680007D0F6 /* Bitmap_n.png in Resources */,
 				D8500EC71D2264930007D0F6 /* LaunchImage-568h@2x.png in Resources */,
 				D850091A1D2251730007D0F6 /* LaunchScreen.storyboard in Resources */,
@@ -677,6 +721,7 @@
 				D8500EE51D2267830007D0F6 /* 2.jpg in Resources */,
 				D85009651D2263680007D0F6 /* katongxiaodongwu_01@3x.png in Resources */,
 				D8500EBD1D22644B0007D0F6 /* AppIcon83.5x83.5@2x~ipad.png in Resources */,
+				D87B2F6A1D227CDB002FF8F4 /* tiantiansifangmao-04@2x.png in Resources */,
 				D85009611D2263680007D0F6 /* Bitmap_n@2x.png in Resources */,
 				D8500EE21D2267830007D0F6 /* 3.jpg in Resources */,
 				D8500EB41D22644B0007D0F6 /* AppIcon50x50~ipad.png in Resources */,
@@ -699,6 +744,7 @@
 				D85009701D2263680007D0F6 /* katongxiaodongwu_20.png in Resources */,
 				D850096C1D2263680007D0F6 /* katongxiaodongwu_03_n.png in Resources */,
 				D8500EAE1D22644B0007D0F6 /* AppIcon29x29~ipad.png in Resources */,
+				D87B2F6B1D227CDB002FF8F4 /* tiantiansifangmao-04@3x.png in Resources */,
 				D85009171D2251730007D0F6 /* Assets.xcassets in Resources */,
 				D8500EE71D2267830007D0F6 /* 4.jpg in Resources */,
 				D85009671D2263680007D0F6 /* katongxiaodongwu_01_n@2x.png in Resources */,
@@ -762,8 +808,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D87B2F591D2273B2002FF8F4 /* XPSearchViewController.m in Sources */,
+				D87B2F651D227772002FF8F4 /* XPTabBar.m in Sources */,
+				D87B2F5C1D2273E8002FF8F4 /* XPCicleViewController.m in Sources */,
+				D87B2F5F1D227406002FF8F4 /* XPBookcityViewController.m in Sources */,
+				D87B2F551D22738C002FF8F4 /* XPBookrackViewController.m in Sources */,
 				D8500EEE1D22682D0007D0F6 /* XPWelcomeViewController.m in Sources */,
 				D85009421D2262FA0007D0F6 /* AppDelegate.m in Sources */,
+				D87B2F471D2272AE002FF8F4 /* XPMineTableController.m in Sources */,
 				D850090C1D2251730007D0F6 /* main.m in Sources */,
 				D87B2F431D2270D7002FF8F4 /* XPTabBarController.m in Sources */,
 			);

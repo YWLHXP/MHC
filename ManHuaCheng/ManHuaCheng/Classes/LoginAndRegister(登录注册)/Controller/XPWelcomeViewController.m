@@ -7,6 +7,7 @@
 //
 
 #import "XPWelcomeViewController.h"
+#import "XPTabBarController.h"
 
 @interface XPWelcomeViewController ()<UIScrollViewDelegate>
 /** scrollView */
@@ -50,7 +51,8 @@
 
 -(void)enter:(UIButton *)sender
 {
-   NSLog(@"打字");
+    XPTabBarController *tabBar = [[XPTabBarController alloc] init];
+    [UIApplication sharedApplication].keyWindow.rootViewController = tabBar;
 }
 
 @end
