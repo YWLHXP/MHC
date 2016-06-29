@@ -8,6 +8,7 @@
 
 #import "XPLoginViewController.h"
 #import "XPRegisterViewController.h"
+#import "XPForgetPasswordViewController.h"
 
 @interface XPLoginViewController ()
 
@@ -28,4 +29,7 @@
     [self.navigationController pushViewController:[XPRegisterViewController new] animated:YES];
 }
 
+- (IBAction)forgetPassword:(id)sender {
+    [self.navigationController pushViewController:[XPForgetPasswordViewController new] animated:YES];
+}
 @end

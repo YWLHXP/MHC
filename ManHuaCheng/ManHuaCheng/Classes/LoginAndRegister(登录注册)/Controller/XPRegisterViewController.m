@@ -19,4 +19,7 @@
     self.navigationItem.title = @"用户注册";
 }
 
+- (IBAction)login:(id)sender {
+    [self.navigationController popViewControllerAnimated:YES];
+}
 @end

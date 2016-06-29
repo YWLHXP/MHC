@@ -1,4 +1,6 @@
 platform :ios, ‘9.0’
 target 'ManHuaCheng' do
 pod 'AFNetworking'
+pod 'MBProgressHUD'
+pod 'YYText'
 end

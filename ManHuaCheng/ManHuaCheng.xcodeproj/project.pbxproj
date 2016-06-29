@@ -22,6 +22,11 @@
 		D805DA9A1D23AFA7000D5EA0 /* XPRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D805DA981D23AFA7000D5EA0 /* XPRegisterViewController.m */; };
 		D805DA9B1D23AFA7000D5EA0 /* XPRegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D805DA991D23AFA7000D5EA0 /* XPRegisterViewController.xib */; };
 		D805DA9D1D23B0E2000D5EA0 /* mine_login_cartoon2.png in Resources */ = {isa = PBXBuildFile; fileRef = D805DA9C1D23B0E2000D5EA0 /* mine_login_cartoon2.png */; };
+		D805DAA11D23BA81000D5EA0 /* XPForgetPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D805DA9F1D23BA81000D5EA0 /* XPForgetPasswordViewController.m */; };
+		D805DAA21D23BA81000D5EA0 /* XPForgetPasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D805DAA01D23BA81000D5EA0 /* XPForgetPasswordViewController.xib */; };
+		D805DAA41D23BBCC000D5EA0 /* mine_login_tip.png in Resources */ = {isa = PBXBuildFile; fileRef = D805DAA31D23BBCC000D5EA0 /* mine_login_tip.png */; };
+		D805DAA81D23D8C2000D5EA0 /* XPFeedbackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D805DAA61D23D8C2000D5EA0 /* XPFeedbackViewController.m */; };
+		D805DAA91D23D8C2000D5EA0 /* XPFeedbackViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D805DAA71D23D8C2000D5EA0 /* XPFeedbackViewController.xib */; };
 		D84DA9F01D2352A600EA180A /* mine_about.png in Resources */ = {isa = PBXBuildFile; fileRef = D84DA9E51D2352A600EA180A /* mine_about.png */; };
 		D84DA9F11D2352A600EA180A /* mine_about@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D84DA9E61D2352A600EA180A /* mine_about@2x.png */; };
 		D84DA9F21D2352A600EA180A /* mine_app.png in Resources */ = {isa = PBXBuildFile; fileRef = D84DA9E71D2352A600EA180A /* mine_app.png */; };
@@ -145,6 +150,13 @@
 		D805DA981D23AFA7000D5EA0 /* XPRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPRegisterViewController.m; sourceTree = "<group>"; };
 		D805DA991D23AFA7000D5EA0 /* XPRegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XPRegisterViewController.xib; sourceTree = "<group>"; };
 		D805DA9C1D23B0E2000D5EA0 /* mine_login_cartoon2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mine_login_cartoon2.png; sourceTree = "<group>"; };
+		D805DA9E1D23BA81000D5EA0 /* XPForgetPasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPForgetPasswordViewController.h; sourceTree = "<group>"; };
+		D805DA9F1D23BA81000D5EA0 /* XPForgetPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPForgetPasswordViewController.m; sourceTree = "<group>"; };
+		D805DAA01D23BA81000D5EA0 /* XPForgetPasswordViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XPForgetPasswordViewController.xib; sourceTree = "<group>"; };
+		D805DAA31D23BBCC000D5EA0 /* mine_login_tip.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mine_login_tip.png; sourceTree = "<group>"; };
+		D805DAA51D23D8C2000D5EA0 /* XPFeedbackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPFeedbackViewController.h; sourceTree = "<group>"; };
+		D805DAA61D23D8C2000D5EA0 /* XPFeedbackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPFeedbackViewController.m; sourceTree = "<group>"; };
+		D805DAA71D23D8C2000D5EA0 /* XPFeedbackViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XPFeedbackViewController.xib; sourceTree = "<group>"; };
 		D84DA9E51D2352A600EA180A /* mine_about.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mine_about.png; sourceTree = "<group>"; };
 		D84DA9E61D2352A600EA180A /* mine_about@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mine_about@2x.png"; sourceTree = "<group>"; };
 		D84DA9E71D2352A600EA180A /* mine_app.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mine_app.png; sourceTree = "<group>"; };
@@ -293,6 +305,7 @@
 		D805DA881D239FDC000D5EA0 /* login */ = {
 			isa = PBXGroup;
 			children = (
+				D805DAA31D23BBCC000D5EA0 /* mine_login_tip.png */,
 				D805DA9C1D23B0E2000D5EA0 /* mine_login_cartoon2.png */,
 				D805DA911D23AA60000D5EA0 /* mine_login_qq.png */,
 				D805DA921D23AA60000D5EA0 /* mine_login_sina.png */,
@@ -577,6 +590,9 @@
 				D84DAA071D235EA300EA180A /* XPMineTableController.xib */,
 				D84DAA231D23724800EA180A /* XPSoftWareTableController.h */,
 				D84DAA241D23724800EA180A /* XPSoftWareTableController.m */,
+				D805DAA51D23D8C2000D5EA0 /* XPFeedbackViewController.h */,
+				D805DAA61D23D8C2000D5EA0 /* XPFeedbackViewController.m */,
+				D805DAA71D23D8C2000D5EA0 /* XPFeedbackViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -724,6 +740,9 @@
 				D805DA971D23AFA7000D5EA0 /* XPRegisterViewController.h */,
 				D805DA981D23AFA7000D5EA0 /* XPRegisterViewController.m */,
 				D805DA991D23AFA7000D5EA0 /* XPRegisterViewController.xib */,
+				D805DA9E1D23BA81000D5EA0 /* XPForgetPasswordViewController.h */,
+				D805DA9F1D23BA81000D5EA0 /* XPForgetPasswordViewController.m */,
+				D805DAA01D23BA81000D5EA0 /* XPForgetPasswordViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -836,6 +855,7 @@
 				D8500EE31D2267830007D0F6 /* 4.jpg in Resources */,
 				D84DA9F11D2352A600EA180A /* mine_about@2x.png in Resources */,
 				D84DAA551D23756900EA180A /* NewTab4_sel.png in Resources */,
+				D805DAA21D23BA81000D5EA0 /* XPForgetPasswordViewController.xib in Resources */,
 				D84DA9FA1D2352A600EA180A /* mine_usercenter.png in Resources */,
 				D84DAA581D23756900EA180A /* NewTab5_nor@2x.png in Resources */,
 				D84DAA531D23756900EA180A /* NewTab4_nor.png in Resources */,
@@ -846,7 +866,9 @@
 				D8500EB71D22644B0007D0F6 /* AppIcon60x60@2x.png in Resources */,
 				D8500EDE1D2267830007D0F6 /* 3.jpg in Resources */,
 				D8500EC91D2264930007D0F6 /* LaunchImage-700-Portrait@2x~ipad.png in Resources */,
+				D805DAA41D23BBCC000D5EA0 /* mine_login_tip.png in Resources */,
 				D84DAA4E1D23756900EA180A /* NewTab3_nor_blink_s@2x.png in Resources */,
+				D805DAA91D23D8C2000D5EA0 /* XPFeedbackViewController.xib in Resources */,
 				D84DAA031D23570400EA180A /* mine_novel.png in Resources */,
 				D805DA901D23A588000D5EA0 /* login_background@2x.png in Resources */,
 				D8500EC81D2264930007D0F6 /* LaunchImage-700-568h@2x.png in Resources */,
@@ -969,8 +991,10 @@
 				D87B2F551D22738C002FF8F4 /* XPBookrackViewController.m in Sources */,
 				D84DAA5D1D2375A800EA180A /* MyTabbar.m in Sources */,
 				D84DAA601D2375BA00EA180A /* XPTabBarController.m in Sources */,
+				D805DAA11D23BA81000D5EA0 /* XPForgetPasswordViewController.m in Sources */,
 				D805DA7F1D239C75000D5EA0 /* XPNavigationController.m in Sources */,
 				D8500EEE1D22682D0007D0F6 /* XPWelcomeViewController.m in Sources */,
+				D805DAA81D23D8C2000D5EA0 /* XPFeedbackViewController.m in Sources */,
 				D85009421D2262FA0007D0F6 /* AppDelegate.m in Sources */,
 				D84DAA081D235EA300EA180A /* XPMineTableController.m in Sources */,
 				D805DA861D239F6C000D5EA0 /* XPLoginViewController.m in Sources */,

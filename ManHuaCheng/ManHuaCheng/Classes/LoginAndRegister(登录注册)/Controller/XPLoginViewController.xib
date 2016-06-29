@@ -79,6 +79,9 @@
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="11"/>
                     <state key="normal" title="忘记密码?"/>
+                    <connections>
+                        <action selector="forgetPassword:" destination="-1" eventType="touchUpInside" id="DuF-g9-wW0"/>
+                    </connections>
                 </button>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ri8-AJ-ckv">
                     <rect key="frame" x="30" y="344" width="540" height="1"/>
@@ -136,7 +139,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ivh-sX-eRw">
-                    <rect key="frame" x="30" y="500" width="50" height="50"/>
+                    <rect key="frame" x="30" y="520" width="50" height="50"/>
                     <animations/>
                     <constraints>
                         <constraint firstAttribute="height" constant="50" id="TpU-yV-4HY"/>
@@ -145,7 +148,7 @@
                     <state key="normal" image="mine_login_sina.png"/>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bRz-fm-7zG">
-                    <rect key="frame" x="520" y="500" width="50" height="50"/>
+                    <rect key="frame" x="520" y="520" width="50" height="50"/>
                     <animations/>
                     <constraints>
                         <constraint firstAttribute="height" constant="50" id="5l5-tR-bqP"/>
@@ -154,7 +157,7 @@
                     <state key="normal" title="Button" image="mine_login_qq.png"/>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="10g-cv-b1t">
-                    <rect key="frame" x="275" y="500" width="50" height="50"/>
+                    <rect key="frame" x="275" y="520" width="50" height="50"/>
                     <animations/>
                     <constraints>
                         <constraint firstAttribute="height" constant="50" id="Q6b-wS-Dxs"/>
@@ -177,10 +180,10 @@
                 <constraint firstItem="cZR-kg-Uo2" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="A2z-Vw-BaA"/>
                 <constraint firstItem="0WO-Wo-LPr" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="30" id="DBE-9W-szu"/>
                 <constraint firstItem="igG-w3-siB" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="F3M-9a-fwm"/>
-                <constraint firstAttribute="bottom" secondItem="Ivh-sX-eRw" secondAttribute="bottom" constant="50" id="FfT-nX-gYO"/>
+                <constraint firstAttribute="bottom" secondItem="Ivh-sX-eRw" secondAttribute="bottom" constant="30" id="FfT-nX-gYO"/>
                 <constraint firstItem="XQX-Qx-0Nu" firstAttribute="leading" secondItem="rOv-jY-MD2" secondAttribute="trailing" constant="8" id="MZp-FF-vC1"/>
                 <constraint firstItem="cZR-kg-Uo2" firstAttribute="top" secondItem="YKN-KX-PGR" secondAttribute="bottom" constant="26" id="Odb-lP-4Am"/>
-                <constraint firstAttribute="bottom" secondItem="bRz-fm-7zG" secondAttribute="bottom" constant="50" id="OlG-3u-Iu0"/>
+                <constraint firstAttribute="bottom" secondItem="bRz-fm-7zG" secondAttribute="bottom" constant="30" id="OlG-3u-Iu0"/>
                 <constraint firstItem="Pqx-PT-Agh" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="30" id="PGj-rp-kw5"/>
                 <constraint firstAttribute="trailing" secondItem="lX8-31-Fbg" secondAttribute="trailing" constant="30" id="Pvt-sm-hL4"/>
                 <constraint firstItem="QhX-Yk-HuM" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="30" id="SNH-vG-6qG"/>
@@ -191,7 +194,7 @@
                 <constraint firstItem="XQX-Qx-0Nu" firstAttribute="top" secondItem="Xjg-Rj-1aD" secondAttribute="bottom" constant="10" id="brw-06-Oew"/>
                 <constraint firstItem="QhX-Yk-HuM" firstAttribute="top" secondItem="ri8-AJ-ckv" secondAttribute="bottom" constant="20" id="c5a-o8-M8h"/>
                 <constraint firstAttribute="trailing" secondItem="XQX-Qx-0Nu" secondAttribute="trailing" constant="30" id="dND-pT-t5u"/>
-                <constraint firstAttribute="bottom" secondItem="10g-cv-b1t" secondAttribute="bottom" constant="50" id="e9d-2W-j2W"/>
+                <constraint firstAttribute="bottom" secondItem="10g-cv-b1t" secondAttribute="bottom" constant="30" id="e9d-2W-j2W"/>
                 <constraint firstItem="10g-cv-b1t" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="f60-mI-pae"/>
                 <constraint firstAttribute="trailing" secondItem="bRz-fm-7zG" secondAttribute="trailing" constant="30" id="fSa-jg-wsJ"/>
                 <constraint firstAttribute="trailing" secondItem="i7U-BC-9oZ" secondAttribute="trailing" constant="30" id="hcO-kR-QM7"/>

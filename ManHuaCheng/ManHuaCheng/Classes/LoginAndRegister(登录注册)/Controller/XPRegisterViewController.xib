@@ -73,7 +73,7 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m1F-2g-oSd">
                     <rect key="frame" x="30" y="375" width="540" height="1"/>
                     <animations/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="1" id="G65-ZE-Cgo"/>
                     </constraints>
@@ -85,11 +85,11 @@
                         <constraint firstAttribute="width" constant="77" id="bwR-Ml-bVF"/>
                         <constraint firstAttribute="height" constant="21" id="r55-kx-T26"/>
                     </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请再次输入密码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wae-rj-AY1">
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请再次输入密码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wae-rj-AY1">
                     <rect key="frame" x="107" y="386" width="463" height="30"/>
                     <animations/>
                     <constraints>
@@ -101,7 +101,7 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UXA-43-7jG">
                     <rect key="frame" x="30" y="416" width="540" height="1"/>
                     <animations/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="1" id="ivG-xv-bGL"/>
                     </constraints>
@@ -112,15 +112,44 @@
                     <constraints>
                         <constraint firstAttribute="height" constant="30" id="r1a-8Z-Cua"/>
                     </constraints>
-                    <state key="normal" title="Button">
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                    <state key="normal" title="注册" backgroundImage="mine_login_autobt_back.png">
                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="已有账号？马上" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VCs-BI-PRD">
+                    <rect key="frame" x="450" y="509" width="95" height="35"/>
+                    <animations/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="35" id="O4m-aq-Kxn"/>
+                        <constraint firstAttribute="width" constant="95" id="vp3-o2-Pnd"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PLS-aA-lop" userLabel="{">
+                    <rect key="frame" x="449" y="509" width="121" height="35"/>
+                    <animations/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="121" id="bvQ-CQ-CTl"/>
+                        <constraint firstAttribute="height" constant="35" id="mdw-MF-Y9N"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <state key="normal" title="登录">
+                        <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <state key="highlighted" title="登录"/>
+                    <connections>
+                        <action selector="login:" destination="-1" eventType="touchUpInside" id="wFJ-ww-aW4"/>
+                    </connections>
                 </button>
             </subviews>
             <animations/>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="wae-rj-AY1" firstAttribute="top" secondItem="m1F-2g-oSd" secondAttribute="bottom" constant="10" id="1Ev-ky-XTK"/>
+                <constraint firstAttribute="trailing" secondItem="VCs-BI-PRD" secondAttribute="trailing" constant="55" id="2a1-gb-d7e"/>
                 <constraint firstAttribute="trailing" secondItem="udR-hY-9eW" secondAttribute="trailing" constant="30" id="3bF-Et-JsJ"/>
                 <constraint firstItem="aBK-Yr-PoN" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="30" id="80P-2e-j0V"/>
                 <constraint firstAttribute="trailing" secondItem="C4Y-5D-V0q" secondAttribute="trailing" constant="30" id="9aU-kX-Pji"/>
@@ -129,6 +158,7 @@
                 <constraint firstAttribute="trailing" secondItem="U65-dx-LRv" secondAttribute="trailing" constant="30" id="DGU-yq-Axv"/>
                 <constraint firstItem="UXA-43-7jG" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="30" id="G5b-Rd-wyh"/>
                 <constraint firstItem="NKo-5C-kYy" firstAttribute="top" secondItem="m1F-2g-oSd" secondAttribute="bottom" constant="15" id="GVp-hr-J1A"/>
+                <constraint firstAttribute="trailing" secondItem="PLS-aA-lop" secondAttribute="trailing" constant="30" id="Hth-89-6i8"/>
                 <constraint firstAttribute="trailing" secondItem="wae-rj-AY1" secondAttribute="trailing" constant="30" id="J28-UX-GAc"/>
                 <constraint firstItem="udR-hY-9eW" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="30" id="JHS-L0-seG"/>
                 <constraint firstItem="U65-dx-LRv" firstAttribute="leading" secondItem="rGi-4j-WSL" secondAttribute="trailing" id="Jd8-8D-Oc1"/>
@@ -141,6 +171,7 @@
                 <constraint firstItem="udR-hY-9eW" firstAttribute="top" secondItem="C4Y-5D-V0q" secondAttribute="bottom" id="b73-Iu-www"/>
                 <constraint firstItem="UXA-43-7jG" firstAttribute="top" secondItem="wae-rj-AY1" secondAttribute="bottom" id="b8Y-bs-jGk"/>
                 <constraint firstItem="uJj-Ks-RUw" firstAttribute="top" secondItem="UXA-43-7jG" secondAttribute="bottom" constant="30" id="eoV-jN-0Sq"/>
+                <constraint firstAttribute="bottom" secondItem="PLS-aA-lop" secondAttribute="bottom" constant="56" id="fRZ-te-yRo"/>
                 <constraint firstItem="uJj-Ks-RUw" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="30" id="i1x-Kr-C5H"/>
                 <constraint firstItem="wae-rj-AY1" firstAttribute="leading" secondItem="NKo-5C-kYy" secondAttribute="trailing" id="kFs-Qe-hk1"/>
                 <constraint firstAttribute="trailing" secondItem="uJj-Ks-RUw" secondAttribute="trailing" constant="30" id="lFA-ou-UqO"/>
@@ -150,10 +181,12 @@
                 <constraint firstItem="U65-dx-LRv" firstAttribute="top" secondItem="udR-hY-9eW" secondAttribute="bottom" constant="10" id="xzF-0s-e03"/>
                 <constraint firstItem="rGi-4j-WSL" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="30" id="yLO-Ky-V66"/>
                 <constraint firstItem="rGi-4j-WSL" firstAttribute="top" secondItem="udR-hY-9eW" secondAttribute="bottom" constant="15" id="zYN-qg-MwW"/>
+                <constraint firstAttribute="bottom" secondItem="VCs-BI-PRD" secondAttribute="bottom" constant="56" id="zi8-ge-CVa"/>
             </constraints>
         </view>
     </objects>
     <resources>
+        <image name="mine_login_autobt_back.png" width="520" height="70"/>
         <image name="mine_login_cartoon2.png" width="640" height="454"/>
     </resources>
 </document>

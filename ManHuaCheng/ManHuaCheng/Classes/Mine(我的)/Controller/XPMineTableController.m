@@ -9,6 +9,8 @@
 #import "XPMineTableController.h"
 #import "XPSoftWareTableController.h"
 #import "XPLoginViewController.h"
+#import <MBProgressHUD.h>
+#import "XPFeedbackViewController.h"
 
 @interface XPMineTableController ()
 @property (strong, nonatomic) IBOutlet UITableViewCell *loginOrRegister;
@@ -31,7 +33,7 @@
     self.navigationItem.title = @"我的";
     
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"nav_reader_set"] style:UIBarButtonItemStylePlain target:self action:@selector(set)];
-
+    
 }
 
 -(void)viewWillAppear:(BOOL)animated
@@ -111,10 +113,12 @@
             return self.about;
             break;
     }
+    [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
     switch (indexPath.section) {
         case 0:
         {
@@ -122,7 +126,42 @@
             [self.navigationController pushViewController:login animated:YES];
         }
             break;
-            
+        case 1:
+        {
+            if (indexPath.row == 0) {
+                [self.navigationController pushViewController:[XPLoginViewController new] animated:YES];
+                MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
+                hud.mode = MBProgressHUDModeText;
+                hud.labelText = NSLocalizedString(@"登录后再去账号中心哦", @"HUD message title");
+                [hud hide:YES afterDelay:2];
+
+            }else
+            {
+                MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
+                hud.mode = MBProgressHUDModeText;
+                hud.labelText = NSLocalizedString(@"登录后再去我的话题哦", @"HUD message title");
+                [hud hide:YES afterDelay:2];
+
+                 [self.navigationController pushViewController:[XPLoginViewController new] animated:YES];
+            }
+        }
+            break;
+        case 2:
+        {
+            if (indexPath.row == 0) {
+                UIAlertController *alert = [UIAlertController alertControllerWithTitle:nil message:nil preferredStyle:UIAlertControllerStyleActionSheet];
+
+                                         
+                UIAlertAction *shareAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleDefault handler:nil];
+        
+                [alert addAction:shareAction];
+                [self presentViewController:alert animated:YES completion:nil];
+            }else
+            {
+                [self.navigationController pushViewController:[XPFeedbackViewController new] animated:YES];
+            }
+        }
+            break;
         default:
             break;
     }
