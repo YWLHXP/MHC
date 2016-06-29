@@ -3,4 +3,5 @@ target 'ManHuaCheng' do
 pod 'AFNetworking'
 pod 'MBProgressHUD'
 pod 'YYText'
+pod 'SDWebImage'
 end

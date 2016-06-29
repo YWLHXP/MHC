@@ -27,6 +27,13 @@
 		D805DAA41D23BBCC000D5EA0 /* mine_login_tip.png in Resources */ = {isa = PBXBuildFile; fileRef = D805DAA31D23BBCC000D5EA0 /* mine_login_tip.png */; };
 		D805DAA81D23D8C2000D5EA0 /* XPFeedbackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D805DAA61D23D8C2000D5EA0 /* XPFeedbackViewController.m */; };
 		D805DAA91D23D8C2000D5EA0 /* XPFeedbackViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D805DAA71D23D8C2000D5EA0 /* XPFeedbackViewController.xib */; };
+		D805DAAF1D240179000D5EA0 /* XPCartoonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D805DAAD1D240179000D5EA0 /* XPCartoonViewController.m */; };
+		D805DAB01D240179000D5EA0 /* XPCartoonViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D805DAAE1D240179000D5EA0 /* XPCartoonViewController.xib */; };
+		D805DAB41D24023D000D5EA0 /* BookrackHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D805DAB11D24023D000D5EA0 /* BookrackHeaderView.xib */; };
+		D805DAB51D24023D000D5EA0 /* CollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D805DAB31D24023D000D5EA0 /* CollectionViewCell.m */; };
+		D805DAB81D240245000D5EA0 /* BookrackListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D805DAB71D240245000D5EA0 /* BookrackListModel.m */; };
+		D805DAC41D2402FD000D5EA0 /* NetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D805DAC11D2402FD000D5EA0 /* NetworkManager.m */; };
+		D805DAC51D2402FD000D5EA0 /* DataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D805DAC31D2402FD000D5EA0 /* DataManager.m */; };
 		D84DA9F01D2352A600EA180A /* mine_about.png in Resources */ = {isa = PBXBuildFile; fileRef = D84DA9E51D2352A600EA180A /* mine_about.png */; };
 		D84DA9F11D2352A600EA180A /* mine_about@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D84DA9E61D2352A600EA180A /* mine_about@2x.png */; };
 		D84DA9F21D2352A600EA180A /* mine_app.png in Resources */ = {isa = PBXBuildFile; fileRef = D84DA9E71D2352A600EA180A /* mine_app.png */; };
@@ -75,7 +82,6 @@
 		D84DAA581D23756900EA180A /* NewTab5_nor@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D84DAA3E1D23756900EA180A /* NewTab5_nor@2x.png */; };
 		D84DAA591D23756900EA180A /* NewTab5_sel.png in Resources */ = {isa = PBXBuildFile; fileRef = D84DAA3F1D23756900EA180A /* NewTab5_sel.png */; };
 		D84DAA5A1D23756900EA180A /* NewTab5_sel@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D84DAA401D23756900EA180A /* NewTab5_sel@2x.png */; };
-		D84DAA5D1D2375A800EA180A /* MyTabbar.m in Sources */ = {isa = PBXBuildFile; fileRef = D84DAA5C1D2375A800EA180A /* MyTabbar.m */; };
 		D84DAA601D2375BA00EA180A /* XPTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = D84DAA5F1D2375BA00EA180A /* XPTabBarController.m */; };
 		D850090C1D2251730007D0F6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D850090B1D2251730007D0F6 /* main.m */; };
 		D85009171D2251730007D0F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D85009161D2251730007D0F6 /* Assets.xcassets */; };
@@ -127,6 +133,7 @@
 		D87B2F591D2273B2002FF8F4 /* XPSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D87B2F581D2273B2002FF8F4 /* XPSearchViewController.m */; };
 		D87B2F5C1D2273E8002FF8F4 /* XPCicleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D87B2F5B1D2273E8002FF8F4 /* XPCicleViewController.m */; };
 		D87B2F5F1D227406002FF8F4 /* XPBookcityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D87B2F5E1D227406002FF8F4 /* XPBookcityViewController.m */; };
+		D8B59F321D24045800A40BBF /* XPTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = D8B59F311D24045800A40BBF /* XPTabBar.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -157,6 +164,18 @@
 		D805DAA51D23D8C2000D5EA0 /* XPFeedbackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPFeedbackViewController.h; sourceTree = "<group>"; };
 		D805DAA61D23D8C2000D5EA0 /* XPFeedbackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPFeedbackViewController.m; sourceTree = "<group>"; };
 		D805DAA71D23D8C2000D5EA0 /* XPFeedbackViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XPFeedbackViewController.xib; sourceTree = "<group>"; };
+		D805DAAC1D240179000D5EA0 /* XPCartoonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPCartoonViewController.h; sourceTree = "<group>"; };
+		D805DAAD1D240179000D5EA0 /* XPCartoonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPCartoonViewController.m; sourceTree = "<group>"; };
+		D805DAAE1D240179000D5EA0 /* XPCartoonViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XPCartoonViewController.xib; sourceTree = "<group>"; };
+		D805DAB11D24023D000D5EA0 /* BookrackHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BookrackHeaderView.xib; sourceTree = "<group>"; };
+		D805DAB21D24023D000D5EA0 /* CollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewCell.h; sourceTree = "<group>"; };
+		D805DAB31D24023D000D5EA0 /* CollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewCell.m; sourceTree = "<group>"; };
+		D805DAB61D240245000D5EA0 /* BookrackListModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookrackListModel.h; sourceTree = "<group>"; };
+		D805DAB71D240245000D5EA0 /* BookrackListModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookrackListModel.m; sourceTree = "<group>"; };
+		D805DAC01D2402FD000D5EA0 /* NetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkManager.h; sourceTree = "<group>"; };
+		D805DAC11D2402FD000D5EA0 /* NetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkManager.m; sourceTree = "<group>"; };
+		D805DAC21D2402FD000D5EA0 /* DataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataManager.h; sourceTree = "<group>"; };
+		D805DAC31D2402FD000D5EA0 /* DataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataManager.m; sourceTree = "<group>"; };
 		D84DA9E51D2352A600EA180A /* mine_about.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mine_about.png; sourceTree = "<group>"; };
 		D84DA9E61D2352A600EA180A /* mine_about@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mine_about@2x.png"; sourceTree = "<group>"; };
 		D84DA9E71D2352A600EA180A /* mine_app.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mine_app.png; sourceTree = "<group>"; };
@@ -207,8 +226,6 @@
 		D84DAA3E1D23756900EA180A /* NewTab5_nor@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NewTab5_nor@2x.png"; sourceTree = "<group>"; };
 		D84DAA3F1D23756900EA180A /* NewTab5_sel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NewTab5_sel.png; sourceTree = "<group>"; };
 		D84DAA401D23756900EA180A /* NewTab5_sel@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NewTab5_sel@2x.png"; sourceTree = "<group>"; };
-		D84DAA5B1D2375A800EA180A /* MyTabbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyTabbar.h; sourceTree = "<group>"; };
-		D84DAA5C1D2375A800EA180A /* MyTabbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyTabbar.m; sourceTree = "<group>"; };
 		D84DAA5E1D2375BA00EA180A /* XPTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPTabBarController.h; sourceTree = "<group>"; };
 		D84DAA5F1D2375BA00EA180A /* XPTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPTabBarController.m; sourceTree = "<group>"; };
 		D85009071D2251730007D0F6 /* ManHuaCheng.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ManHuaCheng.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -270,6 +287,8 @@
 		D87B2F5B1D2273E8002FF8F4 /* XPCicleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPCicleViewController.m; sourceTree = "<group>"; };
 		D87B2F5D1D227406002FF8F4 /* XPBookcityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPBookcityViewController.h; sourceTree = "<group>"; };
 		D87B2F5E1D227406002FF8F4 /* XPBookcityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPBookcityViewController.m; sourceTree = "<group>"; };
+		D8B59F301D24045800A40BBF /* XPTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPTabBar.h; sourceTree = "<group>"; };
+		D8B59F311D24045800A40BBF /* XPTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPTabBar.m; sourceTree = "<group>"; };
 		E93C1B54920AE1A617674E54 /* Pods-ManHuaCheng.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ManHuaCheng.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ManHuaCheng/Pods-ManHuaCheng.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -316,6 +335,35 @@
 				D805DA891D239FEE000D5EA0 /* mine_login_cartoon1.png */,
 			);
 			path = login;
+			sourceTree = "<group>";
+		};
+		D805DAAA1D240179000D5EA0 /* Cartoon漫画 */ = {
+			isa = PBXGroup;
+			children = (
+				D805DAAB1D240179000D5EA0 /* Controller */,
+			);
+			path = "Cartoon漫画";
+			sourceTree = "<group>";
+		};
+		D805DAAB1D240179000D5EA0 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D805DAAC1D240179000D5EA0 /* XPCartoonViewController.h */,
+				D805DAAD1D240179000D5EA0 /* XPCartoonViewController.m */,
+				D805DAAE1D240179000D5EA0 /* XPCartoonViewController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D805DAB91D240281000D5EA0 /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				D805DAC01D2402FD000D5EA0 /* NetworkManager.h */,
+				D805DAC11D2402FD000D5EA0 /* NetworkManager.m */,
+				D805DAC21D2402FD000D5EA0 /* DataManager.h */,
+				D805DAC31D2402FD000D5EA0 /* DataManager.m */,
+			);
+			path = Tool;
 			sourceTree = "<group>";
 		};
 		D84DA9E41D2352A600EA180A /* mine */ = {
@@ -421,6 +469,7 @@
 		D85009271D2262FA0007D0F6 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				D805DAAA1D240179000D5EA0 /* Cartoon漫画 */,
 				D8500EE81D2267E30007D0F6 /* LoginAndRegister(登录注册) */,
 				D85009341D2262FA0007D0F6 /* Main */,
 				D850092C1D2262FA0007D0F6 /* Bookrack(书架) */,
@@ -468,6 +517,7 @@
 		D850092C1D2262FA0007D0F6 /* Bookrack(书架) */ = {
 			isa = PBXGroup;
 			children = (
+				D805DAB91D240281000D5EA0 /* Tool */,
 				D850092D1D2262FA0007D0F6 /* Controller */,
 				D850092E1D2262FA0007D0F6 /* Model */,
 				D850092F1D2262FA0007D0F6 /* View */,
@@ -487,6 +537,8 @@
 		D850092E1D2262FA0007D0F6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				D805DAB61D240245000D5EA0 /* BookrackListModel.h */,
+				D805DAB71D240245000D5EA0 /* BookrackListModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -494,6 +546,9 @@
 		D850092F1D2262FA0007D0F6 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				D805DAB11D24023D000D5EA0 /* BookrackHeaderView.xib */,
+				D805DAB21D24023D000D5EA0 /* CollectionViewCell.h */,
+				D805DAB31D24023D000D5EA0 /* CollectionViewCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -566,8 +621,8 @@
 		D85009391D2262FA0007D0F6 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				D84DAA5B1D2375A800EA180A /* MyTabbar.h */,
-				D84DAA5C1D2375A800EA180A /* MyTabbar.m */,
+				D8B59F301D24045800A40BBF /* XPTabBar.h */,
+				D8B59F311D24045800A40BBF /* XPTabBar.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -871,12 +926,14 @@
 				D805DAA91D23D8C2000D5EA0 /* XPFeedbackViewController.xib in Resources */,
 				D84DAA031D23570400EA180A /* mine_novel.png in Resources */,
 				D805DA901D23A588000D5EA0 /* login_background@2x.png in Resources */,
+				D805DAB01D240179000D5EA0 /* XPCartoonViewController.xib in Resources */,
 				D8500EC81D2264930007D0F6 /* LaunchImage-700-568h@2x.png in Resources */,
 				D84DAA4F1D23756900EA180A /* NewTab3_nor_day.png in Resources */,
 				D8500EB81D22644B0007D0F6 /* AppIcon60x60@3x.png in Resources */,
 				D84DA9F31D2352A600EA180A /* mine_app@2x.png in Resources */,
 				D84DA9F81D2352A600EA180A /* mine_topic.png in Resources */,
 				D84DAA4D1D23756900EA180A /* NewTab3_nor_blink_s.png in Resources */,
+				D805DAB41D24023D000D5EA0 /* BookrackHeaderView.xib in Resources */,
 				D805DA951D23AA60000D5EA0 /* mine_login_sina.png in Resources */,
 				D84DA9FD1D2356D200EA180A /* mine_feedback.png in Resources */,
 				D8500EB51D22644B0007D0F6 /* AppIcon57x57.png in Resources */,
@@ -984,18 +1041,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				D84DAA251D23724800EA180A /* XPSoftWareTableController.m in Sources */,
+				D805DAC41D2402FD000D5EA0 /* NetworkManager.m in Sources */,
 				D87B2F591D2273B2002FF8F4 /* XPSearchViewController.m in Sources */,
 				D87B2F5C1D2273E8002FF8F4 /* XPCicleViewController.m in Sources */,
+				D805DAB81D240245000D5EA0 /* BookrackListModel.m in Sources */,
 				D805DA821D239CD5000D5EA0 /* UIView+XPExtension.m in Sources */,
 				D87B2F5F1D227406002FF8F4 /* XPBookcityViewController.m in Sources */,
 				D87B2F551D22738C002FF8F4 /* XPBookrackViewController.m in Sources */,
-				D84DAA5D1D2375A800EA180A /* MyTabbar.m in Sources */,
+				D805DAB51D24023D000D5EA0 /* CollectionViewCell.m in Sources */,
+				D805DAC51D2402FD000D5EA0 /* DataManager.m in Sources */,
 				D84DAA601D2375BA00EA180A /* XPTabBarController.m in Sources */,
+				D8B59F321D24045800A40BBF /* XPTabBar.m in Sources */,
 				D805DAA11D23BA81000D5EA0 /* XPForgetPasswordViewController.m in Sources */,
 				D805DA7F1D239C75000D5EA0 /* XPNavigationController.m in Sources */,
 				D8500EEE1D22682D0007D0F6 /* XPWelcomeViewController.m in Sources */,
 				D805DAA81D23D8C2000D5EA0 /* XPFeedbackViewController.m in Sources */,
 				D85009421D2262FA0007D0F6 /* AppDelegate.m in Sources */,
+				D805DAAF1D240179000D5EA0 /* XPCartoonViewController.m in Sources */,
 				D84DAA081D235EA300EA180A /* XPMineTableController.m in Sources */,
 				D805DA861D239F6C000D5EA0 /* XPLoginViewController.m in Sources */,
 				D805DA9A1D23AFA7000D5EA0 /* XPRegisterViewController.m in Sources */,

@@ -13,8 +13,7 @@
 #import "XPCicleViewController.h"
 #import "XPMineTableController.h"
 #import "XPNavigationController.h"
-
-#import "MyTabbar.h"
+#import "XPTabBar.h"
 
 @interface XPTabBarController ()
 
@@ -25,7 +24,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    MyTabbar *tabbar = [[MyTabbar alloc]initWithFrame:self.tabBar.frame];
+    XPTabBar *tabbar = [[XPTabBar alloc]initWithFrame:self.tabBar.frame];
     //    KVC 可以通过键值的方式对对象属性的进行赋值 和 取值
     [self setValue:tabbar forKey:@"tabBar"];
 
