@@ -8,6 +8,7 @@
 
 #import "XPMineTableController.h"
 #import "XPSoftWareTableController.h"
+#import "XPLoginViewController.h"
 
 @interface XPMineTableController ()
 @property (strong, nonatomic) IBOutlet UITableViewCell *loginOrRegister;
@@ -30,7 +31,13 @@
     self.navigationItem.title = @"我的";
     
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"nav_reader_set"] style:UIBarButtonItemStylePlain target:self action:@selector(set)];
-    self.navigationController.navigationBar.tintColor = [UIColor colorWithRed:105/255.0 green:106/255.0 blue:108/255.0 alpha:1];
+
+}
+
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    self.navigationController.navigationBar.tintColor = [UIColor colorWithRed:110/255.0 green:111/255.0 blue:112/255.0 alpha:1];
 }
 
 - (void)set
@@ -105,6 +112,23 @@
             break;
     }
 }
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    switch (indexPath.section) {
+        case 0:
+        {
+            XPLoginViewController *login = [XPLoginViewController new];
+            [self.navigationController pushViewController:login animated:YES];
+        }
+            break;
+            
+        default:
+            break;
+    }
+    [self.tabBarController.tabBar setHidden:YES];
+}
+
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {

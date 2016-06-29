@@ -12,7 +12,9 @@
 #import "XPSearchViewController.h"
 #import "XPCicleViewController.h"
 #import "XPMineTableController.h"
-#import "XPTabBar.h"
+#import "XPNavigationController.h"
+
+#import "MyTabbar.h"
 
 @interface XPTabBarController ()
 
@@ -23,52 +25,49 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    MyTabbar *tabbar = [[MyTabbar alloc]initWithFrame:self.tabBar.frame];
+    //    KVC 可以通过键值的方式对对象属性的进行赋值 和 取值
+    [self setValue:tabbar forKey:@"tabBar"];
+
+    
     // 添加子控制器
     [self addAllChildViewController];
     
-    XPTabBar *tabbar = [[XPTabBar alloc]initWithFrame:self.tabBar.frame];
-    //    KVC 可以通过键值的方式对对象属性的进行赋值 和 取值
-    [self setValue:tabbar forKey:@"tabBar"];
-    
      self.tabBar.tintColor = [UIColor redColor];
+    
+    
 }
+
+#pragma mark - 自定义的tabBar
 
 #pragma mark -添加子控制器
 - (void)addAllChildViewController
 {
     //书架
-    UINavigationController *bookRack = [[UINavigationController alloc] initWithRootViewController: [[XPBookrackViewController alloc] init]];
-    [self addOneChildViewController:bookRack image:[UIImage imageNamed:@"katongxiaodongwu_03_n"] selImage:[UIImage imageNamed:@"katongxiaodongwu_03@2x"]];
-    bookRack.title = @"书架";
+    [self addOneChildViewController:[[UINavigationController alloc] initWithRootViewController: [[XPBookrackViewController alloc] init]] image:[UIImage imageNamed:@"NewTab1_nor"] selImage:[UIImage imageNamed:@"NewTab1_sel"] withtitle:@"书架"];
     
     //书城
-    UINavigationController *bookCity = [[UINavigationController alloc] initWithRootViewController: [[XPBookcityViewController alloc] init]];
-    [self addOneChildViewController:bookCity image:[UIImage imageNamed:@"katongxiaodongwu_20_n@2x"] selImage:[UIImage imageNamed:@"katongxiaodongwu_20@2x"]];
-    bookCity.title = @"书城";
+    [self addOneChildViewController:[[UINavigationController alloc] initWithRootViewController: [[XPBookcityViewController alloc] init]] image:[UIImage imageNamed:@"NewTab2_nor"] selImage:[UIImage imageNamed:@"NewTab2_sel"] withtitle:@"书城"];
+    
     
     //圈子
-    UINavigationController *circle = [[UINavigationController alloc] initWithRootViewController: [[XPCicleViewController alloc] init]];
-    [self addOneChildViewController:circle image:[UIImage imageNamed:@"katongxiaodongwu_01_n@2x"] selImage:[UIImage imageNamed:@"katongxiaodongwu_01@2x"]];
-    circle.title = @"圈子";
+    [self addOneChildViewController:[[UINavigationController alloc] initWithRootViewController: [[XPCicleViewController alloc] init]] image:[UIImage imageNamed:@"NewTab4_nor"] selImage:[UIImage imageNamed:@"NewTab4_sel"] withtitle:@"圈子"];
     
     //我的
-    UINavigationController *mine = [[UINavigationController alloc] initWithRootViewController: [[XPMineTableController alloc] init]];
-    [self addOneChildViewController:mine image:[UIImage imageNamed:@"Bitmap_n@2x"] selImage:[UIImage imageNamed:@"Bitmap@2x"]];
-    mine.title = @"我的";
+    [self addOneChildViewController:[[XPNavigationController alloc] initWithRootViewController: [[XPMineTableController alloc] init]] image:[UIImage imageNamed:@"NewTab5_nor"] selImage:[UIImage imageNamed:@"NewTab5_sel"] withtitle:@"我的"];
     
 }
 
 #pragma mark -添加一个子控制器
-- (void)addOneChildViewController:(UIViewController *)vc image:(UIImage *)image selImage:(UIImage *)selImage
+- (void)addOneChildViewController:(UIViewController *)vc image:(UIImage *)image selImage:(UIImage *)selImage withtitle:(NSString *)title
 {
     //    vc.navigationItem.title = title;
-    vc.tabBarItem.image = image;
+    vc.tabBarItem.image = [image imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     //保持图片不被渲染
     UIImage *originalImage = [selImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     vc.tabBarItem.selectedImage = originalImage;
-    
+    vc.title = title;
     [self addChildViewController:vc];
-   
+    
 }
-
 @end
