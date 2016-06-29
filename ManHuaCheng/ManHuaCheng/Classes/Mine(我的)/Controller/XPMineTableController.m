@@ -2,13 +2,23 @@
 //  XPMineTableController.m
 //  ManHuaCheng
 //
-//  Created by dragon on 16/6/28.
+//  Created by dragon on 16/6/29.
 //  Copyright © 2016年 win. All rights reserved.
 //
 
 #import "XPMineTableController.h"
+#import "XPSoftWareTableController.h"
 
 @interface XPMineTableController ()
+@property (strong, nonatomic) IBOutlet UITableViewCell *loginOrRegister;
+@property (strong, nonatomic) IBOutlet UITableViewCell *myAccount;
+@property (strong, nonatomic) IBOutlet UITableViewCell *myTopic;
+@property (strong, nonatomic) IBOutlet UITableViewCell *shareToFriends;
+@property (strong, nonatomic) IBOutlet UITableViewCell *bookBack;
+@property (strong, nonatomic) IBOutlet UITableViewCell *localRead;
+@property (strong, nonatomic) IBOutlet UITableViewCell *novelRoom;
+@property (strong, nonatomic) IBOutlet UITableViewCell *invate;
+@property (strong, nonatomic) IBOutlet UITableViewCell *about;
 
 @end
 
@@ -16,99 +26,103 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.tableView.backgroundColor = [UIColor colorWithRed:234/255.0 green:235/255.0 blue:237/255.0 alpha:1];
+    self.navigationItem.title = @"我的";
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"nav_reader_set"] style:UIBarButtonItemStylePlain target:self action:@selector(set)];
+    self.navigationController.navigationBar.tintColor = [UIColor colorWithRed:105/255.0 green:106/255.0 blue:108/255.0 alpha:1];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)set
+{
+    XPSoftWareTableController *softWare = [XPSoftWareTableController new];
+    [self.navigationController pushViewController:softWare animated:YES];
 }
 
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
+    return 5;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
+    if (section == 0) {
+        return 1;
+    }else if(section == 1)
+    {
+        return 2;
+    }else if(section == 2)
+    {
+        return 2;
+    }
+    else if(section == 3)
+    {
+        return 3;
+    }else
+    {
+        return 1;
+    }
 }
 
-/*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
-    
-    // Configure the cell...
-    
-    return cell;
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
+    }
+    switch (indexPath.section) {
+        case 0:
+            return self.loginOrRegister;
+            break;
+        case 1:
+            if (indexPath.row == 0) {
+                return self.myAccount;
+            }else
+            {
+                return self.myTopic;
+            }
+            break;
+        case 2:
+            if (indexPath.row == 0) {
+                return self.shareToFriends;
+            }else
+            {
+                return self.bookBack;
+            }
+            break;
+        case 3:
+            if (indexPath.row == 0) {
+                return self.localRead;
+            }else if(indexPath.row == 1)
+            {
+                return self.novelRoom;
+            }else
+            {
+                return self.invate;
+            }
+            break;
+        default:
+            return self.about;
+            break;
+    }
 }
-*/
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+{
+    if (section == 0) {
+        return 0;
+    }else
+    {
+        return 10;
+    }
 }
-*/
 
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (indexPath.section == 0) {
+        return 74;
+    }else
+    {
+        return 44;
+    }
 }
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
-#pragma mark - Table view delegate
-
-// In a xib-based application, navigation from a table can be handled in -tableView:didSelectRowAtIndexPath:
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Navigation logic may go here, for example:
-    // Create the next view controller.
-    <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:<#@"Nib name"#> bundle:nil];
-    
-    // Pass the selected object to the new view controller.
-    
-    // Push the view controller.
-    [self.navigationController pushViewController:detailViewController animated:YES];
-}
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-
 @end

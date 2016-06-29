@@ -1,5 +1,5 @@
 //
-//  XPMineTableController.h
+//  XPSoftWareTableController.h
 //  ManHuaCheng
 //
 //  Created by dragon on 16/6/29.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface XPMineTableController : UITableViewController
+@interface XPSoftWareTableController : UITableViewController
 
 @end

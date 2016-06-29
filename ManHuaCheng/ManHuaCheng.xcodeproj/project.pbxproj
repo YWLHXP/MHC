@@ -8,6 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		79DB85F4E9C6B5A36FDD5E74 /* libPods-ManHuaCheng.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 71049E0322356E97FFBD99C3 /* libPods-ManHuaCheng.a */; };
+		D84DA9F01D2352A600EA180A /* mine_about.png in Resources */ = {isa = PBXBuildFile; fileRef = D84DA9E51D2352A600EA180A /* mine_about.png */; };
+		D84DA9F11D2352A600EA180A /* mine_about@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D84DA9E61D2352A600EA180A /* mine_about@2x.png */; };
+		D84DA9F21D2352A600EA180A /* mine_app.png in Resources */ = {isa = PBXBuildFile; fileRef = D84DA9E71D2352A600EA180A /* mine_app.png */; };
+		D84DA9F31D2352A600EA180A /* mine_app@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D84DA9E81D2352A600EA180A /* mine_app@2x.png */; };
+		D84DA9F41D2352A600EA180A /* mine_icon_big_nor.png in Resources */ = {isa = PBXBuildFile; fileRef = D84DA9E91D2352A600EA180A /* mine_icon_big_nor.png */; };
+		D84DA9F51D2352A600EA180A /* mine_icon_big_nor@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D84DA9EA1D2352A600EA180A /* mine_icon_big_nor@2x.png */; };
+		D84DA9F61D2352A600EA180A /* mine_share.png in Resources */ = {isa = PBXBuildFile; fileRef = D84DA9EB1D2352A600EA180A /* mine_share.png */; };
+		D84DA9F71D2352A600EA180A /* mine_share@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D84DA9EC1D2352A600EA180A /* mine_share@2x.png */; };
+		D84DA9F81D2352A600EA180A /* mine_topic.png in Resources */ = {isa = PBXBuildFile; fileRef = D84DA9ED1D2352A600EA180A /* mine_topic.png */; };
+		D84DA9F91D2352A600EA180A /* mine_topic@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D84DA9EE1D2352A600EA180A /* mine_topic@2x.png */; };
+		D84DA9FA1D2352A600EA180A /* mine_usercenter.png in Resources */ = {isa = PBXBuildFile; fileRef = D84DA9EF1D2352A600EA180A /* mine_usercenter.png */; };
+		D84DA9FD1D2356D200EA180A /* mine_feedback.png in Resources */ = {isa = PBXBuildFile; fileRef = D84DA9FB1D2356D200EA180A /* mine_feedback.png */; };
+		D84DA9FE1D2356D200EA180A /* mine_feedback@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D84DA9FC1D2356D200EA180A /* mine_feedback@2x.png */; };
+		D84DAA001D2356F600EA180A /* mine_localread.png in Resources */ = {isa = PBXBuildFile; fileRef = D84DA9FF1D2356F600EA180A /* mine_localread.png */; };
+		D84DAA031D23570400EA180A /* mine_novel.png in Resources */ = {isa = PBXBuildFile; fileRef = D84DAA011D23570400EA180A /* mine_novel.png */; };
+		D84DAA041D23570400EA180A /* mine_novel@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D84DAA021D23570400EA180A /* mine_novel@2x.png */; };
+		D84DAA081D235EA300EA180A /* XPMineTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = D84DAA061D235EA300EA180A /* XPMineTableController.m */; };
+		D84DAA091D235EA300EA180A /* XPMineTableController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D84DAA071D235EA300EA180A /* XPMineTableController.xib */; };
+		D84DAA0C1D2364A200EA180A /* nav_reader_set.png in Resources */ = {isa = PBXBuildFile; fileRef = D84DAA0A1D2364A200EA180A /* nav_reader_set.png */; };
+		D84DAA0D1D2364A200EA180A /* nav_reader_set@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D84DAA0B1D2364A200EA180A /* nav_reader_set@2x.png */; };
+		D84DAA141D23672100EA180A /* nav_back.png in Resources */ = {isa = PBXBuildFile; fileRef = D84DAA131D23672100EA180A /* nav_back.png */; };
+		D84DAA251D23724800EA180A /* XPSoftWareTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = D84DAA241D23724800EA180A /* XPSoftWareTableController.m */; };
 		D850090C1D2251730007D0F6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D850090B1D2251730007D0F6 /* main.m */; };
 		D85009171D2251730007D0F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D85009161D2251730007D0F6 /* Assets.xcassets */; };
 		D850091A1D2251730007D0F6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D85009181D2251730007D0F6 /* LaunchScreen.storyboard */; };
@@ -79,8 +101,6 @@
 		D8500EE71D2267830007D0F6 /* 4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D8500EDB1D2267830007D0F6 /* 4.jpg */; };
 		D8500EEE1D22682D0007D0F6 /* XPWelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8500EED1D22682D0007D0F6 /* XPWelcomeViewController.m */; };
 		D87B2F431D2270D7002FF8F4 /* XPTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = D87B2F421D2270D7002FF8F4 /* XPTabBarController.m */; };
-		D87B2F471D2272AE002FF8F4 /* XPMineTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = D87B2F451D2272AE002FF8F4 /* XPMineTableController.m */; };
-		D87B2F481D2272AE002FF8F4 /* XPMineTableController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D87B2F461D2272AE002FF8F4 /* XPMineTableController.xib */; };
 		D87B2F551D22738C002FF8F4 /* XPBookrackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D87B2F541D22738C002FF8F4 /* XPBookrackViewController.m */; };
 		D87B2F591D2273B2002FF8F4 /* XPSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D87B2F581D2273B2002FF8F4 /* XPSearchViewController.m */; };
 		D87B2F5C1D2273E8002FF8F4 /* XPCicleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D87B2F5B1D2273E8002FF8F4 /* XPCicleViewController.m */; };
@@ -94,6 +114,30 @@
 /* Begin PBXFileReference section */
 		31FFD4E0CC863556744B4DB5 /* Pods-ManHuaCheng.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ManHuaCheng.release.xcconfig"; path = "Pods/Target Support Files/Pods-ManHuaCheng/Pods-ManHuaCheng.release.xcconfig"; sourceTree = "<group>"; };
 		71049E0322356E97FFBD99C3 /* libPods-ManHuaCheng.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ManHuaCheng.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D84DA9E51D2352A600EA180A /* mine_about.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mine_about.png; sourceTree = "<group>"; };
+		D84DA9E61D2352A600EA180A /* mine_about@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mine_about@2x.png"; sourceTree = "<group>"; };
+		D84DA9E71D2352A600EA180A /* mine_app.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mine_app.png; sourceTree = "<group>"; };
+		D84DA9E81D2352A600EA180A /* mine_app@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mine_app@2x.png"; sourceTree = "<group>"; };
+		D84DA9E91D2352A600EA180A /* mine_icon_big_nor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mine_icon_big_nor.png; sourceTree = "<group>"; };
+		D84DA9EA1D2352A600EA180A /* mine_icon_big_nor@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mine_icon_big_nor@2x.png"; sourceTree = "<group>"; };
+		D84DA9EB1D2352A600EA180A /* mine_share.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mine_share.png; sourceTree = "<group>"; };
+		D84DA9EC1D2352A600EA180A /* mine_share@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mine_share@2x.png"; sourceTree = "<group>"; };
+		D84DA9ED1D2352A600EA180A /* mine_topic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mine_topic.png; sourceTree = "<group>"; };
+		D84DA9EE1D2352A600EA180A /* mine_topic@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mine_topic@2x.png"; sourceTree = "<group>"; };
+		D84DA9EF1D2352A600EA180A /* mine_usercenter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mine_usercenter.png; sourceTree = "<group>"; };
+		D84DA9FB1D2356D200EA180A /* mine_feedback.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mine_feedback.png; sourceTree = "<group>"; };
+		D84DA9FC1D2356D200EA180A /* mine_feedback@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mine_feedback@2x.png"; sourceTree = "<group>"; };
+		D84DA9FF1D2356F600EA180A /* mine_localread.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mine_localread.png; sourceTree = "<group>"; };
+		D84DAA011D23570400EA180A /* mine_novel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mine_novel.png; sourceTree = "<group>"; };
+		D84DAA021D23570400EA180A /* mine_novel@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mine_novel@2x.png"; sourceTree = "<group>"; };
+		D84DAA051D235EA300EA180A /* XPMineTableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPMineTableController.h; sourceTree = "<group>"; };
+		D84DAA061D235EA300EA180A /* XPMineTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPMineTableController.m; sourceTree = "<group>"; };
+		D84DAA071D235EA300EA180A /* XPMineTableController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XPMineTableController.xib; sourceTree = "<group>"; };
+		D84DAA0A1D2364A200EA180A /* nav_reader_set.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nav_reader_set.png; sourceTree = "<group>"; };
+		D84DAA0B1D2364A200EA180A /* nav_reader_set@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "nav_reader_set@2x.png"; sourceTree = "<group>"; };
+		D84DAA131D23672100EA180A /* nav_back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nav_back.png; sourceTree = "<group>"; };
+		D84DAA231D23724800EA180A /* XPSoftWareTableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPSoftWareTableController.h; sourceTree = "<group>"; };
+		D84DAA241D23724800EA180A /* XPSoftWareTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPSoftWareTableController.m; sourceTree = "<group>"; };
 		D85009071D2251730007D0F6 /* ManHuaCheng.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ManHuaCheng.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D850090B1D2251730007D0F6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D85009161D2251730007D0F6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -171,9 +215,6 @@
 		D8500EEF1D2268840007D0F6 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		D87B2F411D2270D7002FF8F4 /* XPTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPTabBarController.h; sourceTree = "<group>"; };
 		D87B2F421D2270D7002FF8F4 /* XPTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPTabBarController.m; sourceTree = "<group>"; };
-		D87B2F441D2272AE002FF8F4 /* XPMineTableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPMineTableController.h; sourceTree = "<group>"; };
-		D87B2F451D2272AE002FF8F4 /* XPMineTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPMineTableController.m; sourceTree = "<group>"; };
-		D87B2F461D2272AE002FF8F4 /* XPMineTableController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XPMineTableController.xib; sourceTree = "<group>"; };
 		D87B2F531D22738C002FF8F4 /* XPBookrackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPBookrackViewController.h; sourceTree = "<group>"; };
 		D87B2F541D22738C002FF8F4 /* XPBookrackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPBookrackViewController.m; sourceTree = "<group>"; };
 		D87B2F571D2273B2002FF8F4 /* XPSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPSearchViewController.h; sourceTree = "<group>"; };
@@ -217,6 +258,32 @@
 				31FFD4E0CC863556744B4DB5 /* Pods-ManHuaCheng.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		D84DA9E41D2352A600EA180A /* mine */ = {
+			isa = PBXGroup;
+			children = (
+				D84DAA131D23672100EA180A /* nav_back.png */,
+				D84DAA0A1D2364A200EA180A /* nav_reader_set.png */,
+				D84DAA0B1D2364A200EA180A /* nav_reader_set@2x.png */,
+				D84DA9FB1D2356D200EA180A /* mine_feedback.png */,
+				D84DA9FF1D2356F600EA180A /* mine_localread.png */,
+				D84DAA011D23570400EA180A /* mine_novel.png */,
+				D84DAA021D23570400EA180A /* mine_novel@2x.png */,
+				D84DA9FC1D2356D200EA180A /* mine_feedback@2x.png */,
+				D84DA9E51D2352A600EA180A /* mine_about.png */,
+				D84DA9E61D2352A600EA180A /* mine_about@2x.png */,
+				D84DA9E71D2352A600EA180A /* mine_app.png */,
+				D84DA9E81D2352A600EA180A /* mine_app@2x.png */,
+				D84DA9E91D2352A600EA180A /* mine_icon_big_nor.png */,
+				D84DA9EA1D2352A600EA180A /* mine_icon_big_nor@2x.png */,
+				D84DA9EB1D2352A600EA180A /* mine_share.png */,
+				D84DA9EC1D2352A600EA180A /* mine_share@2x.png */,
+				D84DA9ED1D2352A600EA180A /* mine_topic.png */,
+				D84DA9EE1D2352A600EA180A /* mine_topic@2x.png */,
+				D84DA9EF1D2352A600EA180A /* mine_usercenter.png */,
+			);
+			path = mine;
 			sourceTree = "<group>";
 		};
 		D85008FE1D2251730007D0F6 = {
@@ -423,9 +490,11 @@
 		D850093B1D2262FA0007D0F6 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				D87B2F441D2272AE002FF8F4 /* XPMineTableController.h */,
-				D87B2F451D2272AE002FF8F4 /* XPMineTableController.m */,
-				D87B2F461D2272AE002FF8F4 /* XPMineTableController.xib */,
+				D84DAA051D235EA300EA180A /* XPMineTableController.h */,
+				D84DAA061D235EA300EA180A /* XPMineTableController.m */,
+				D84DAA071D235EA300EA180A /* XPMineTableController.xib */,
+				D84DAA231D23724800EA180A /* XPSoftWareTableController.h */,
+				D84DAA241D23724800EA180A /* XPSoftWareTableController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -484,6 +553,7 @@
 				D8500E951D22644B0007D0F6 /* appicon */,
 				D8500ECF1D2267830007D0F6 /* welcome */,
 				D8500EBE1D2264930007D0F6 /* launchimage */,
+				D84DA9E41D2352A600EA180A /* mine */,
 			);
 			path = images;
 			sourceTree = "<group>";
@@ -687,12 +757,14 @@
 				D8500EE41D2267830007D0F6 /* 1.jpg in Resources */,
 				D85009681D2263680007D0F6 /* katongxiaodongwu_01_n@3x.png in Resources */,
 				D85009621D2263680007D0F6 /* Bitmap_n@3x.png in Resources */,
+				D84DA9F51D2352A600EA180A /* mine_icon_big_nor@2x.png in Resources */,
+				D84DAA091D235EA300EA180A /* XPMineTableController.xib in Resources */,
 				D850096A1D2263680007D0F6 /* katongxiaodongwu_03@2x.png in Resources */,
 				D85009661D2263680007D0F6 /* katongxiaodongwu_01_n.png in Resources */,
 				D85009691D2263680007D0F6 /* katongxiaodongwu_03.png in Resources */,
-				D87B2F481D2272AE002FF8F4 /* XPMineTableController.xib in Resources */,
 				D8500EE11D2267830007D0F6 /* 2.jpg in Resources */,
 				D87B2F691D227CDB002FF8F4 /* tiantiansifangmao-04.png in Resources */,
+				D84DAA0C1D2364A200EA180A /* nav_reader_set.png in Resources */,
 				D85009601D2263680007D0F6 /* Bitmap_n.png in Resources */,
 				D8500EC71D2264930007D0F6 /* LaunchImage-568h@2x.png in Resources */,
 				D850091A1D2251730007D0F6 /* LaunchScreen.storyboard in Resources */,
@@ -700,27 +772,37 @@
 				D8500EBA1D22644B0007D0F6 /* AppIcon72x72~ipad.png in Resources */,
 				D8500ECE1D2264930007D0F6 /* LaunchImage@2x.png in Resources */,
 				D8500EAF1D22644B0007D0F6 /* AppIcon40x40@2x.png in Resources */,
+				D84DAA141D23672100EA180A /* nav_back.png in Resources */,
 				D8500ECB1D2264930007D0F6 /* LaunchImage-800-667h@2x.png in Resources */,
 				D85009731D2263680007D0F6 /* katongxiaodongwu_20_n@2x.png in Resources */,
 				D8500EAA1D22644B0007D0F6 /* AppIcon29x29.png in Resources */,
+				D84DA9F41D2352A600EA180A /* mine_icon_big_nor.png in Resources */,
 				D850096D1D2263680007D0F6 /* katongxiaodongwu_03_n@2x.png in Resources */,
 				D850095D1D2263680007D0F6 /* Bitmap.png in Resources */,
 				D8500EE31D2267830007D0F6 /* 4.jpg in Resources */,
+				D84DA9F11D2352A600EA180A /* mine_about@2x.png in Resources */,
+				D84DA9FA1D2352A600EA180A /* mine_usercenter.png in Resources */,
 				D8500EDF1D2267830007D0F6 /* 4.jpg in Resources */,
 				D8500EDD1D2267830007D0F6 /* 2.jpg in Resources */,
 				D85009631D2263680007D0F6 /* katongxiaodongwu_01.png in Resources */,
 				D8500EB71D22644B0007D0F6 /* AppIcon60x60@2x.png in Resources */,
 				D8500EDE1D2267830007D0F6 /* 3.jpg in Resources */,
 				D8500EC91D2264930007D0F6 /* LaunchImage-700-Portrait@2x~ipad.png in Resources */,
+				D84DAA031D23570400EA180A /* mine_novel.png in Resources */,
 				D8500EC81D2264930007D0F6 /* LaunchImage-700-568h@2x.png in Resources */,
 				D8500EB81D22644B0007D0F6 /* AppIcon60x60@3x.png in Resources */,
+				D84DA9F31D2352A600EA180A /* mine_app@2x.png in Resources */,
 				D850095E1D2263680007D0F6 /* Bitmap@2x.png in Resources */,
+				D84DA9F81D2352A600EA180A /* mine_topic.png in Resources */,
+				D84DA9FD1D2356D200EA180A /* mine_feedback.png in Resources */,
 				D8500EB51D22644B0007D0F6 /* AppIcon57x57.png in Resources */,
+				D84DA9F21D2352A600EA180A /* mine_app.png in Resources */,
 				D8500EB91D22644B0007D0F6 /* AppIcon72x72@2x~ipad.png in Resources */,
 				D850095F1D2263680007D0F6 /* Bitmap@3x.png in Resources */,
 				D8500EE51D2267830007D0F6 /* 2.jpg in Resources */,
 				D85009651D2263680007D0F6 /* katongxiaodongwu_01@3x.png in Resources */,
 				D8500EBD1D22644B0007D0F6 /* AppIcon83.5x83.5@2x~ipad.png in Resources */,
+				D84DA9FE1D2356D200EA180A /* mine_feedback@2x.png in Resources */,
 				D87B2F6A1D227CDB002FF8F4 /* tiantiansifangmao-04@2x.png in Resources */,
 				D85009611D2263680007D0F6 /* Bitmap_n@2x.png in Resources */,
 				D8500EE21D2267830007D0F6 /* 3.jpg in Resources */,
@@ -736,17 +818,24 @@
 				D8500ECA1D2264930007D0F6 /* LaunchImage-700@2x.png in Resources */,
 				D8500EB31D22644B0007D0F6 /* AppIcon50x50@2x~ipad.png in Resources */,
 				D8500EE61D2267830007D0F6 /* 3.jpg in Resources */,
+				D84DA9F61D2352A600EA180A /* mine_share.png in Resources */,
 				D8500EBC1D22644B0007D0F6 /* AppIcon76x76~ipad.png in Resources */,
 				D8500ECD1D2264930007D0F6 /* LaunchImage-Portrait@2x~ipad.png in Resources */,
 				D850096E1D2263680007D0F6 /* katongxiaodongwu_03_n@3x.png in Resources */,
+				D84DA9F01D2352A600EA180A /* mine_about.png in Resources */,
 				D850096F1D2263680007D0F6 /* katongxiaodongwu_20._npng.png in Resources */,
 				D85009741D2263680007D0F6 /* katongxiaodongwu_20_n@3x.png in Resources */,
+				D84DA9F91D2352A600EA180A /* mine_topic@2x.png in Resources */,
+				D84DAA041D23570400EA180A /* mine_novel@2x.png in Resources */,
 				D85009701D2263680007D0F6 /* katongxiaodongwu_20.png in Resources */,
 				D850096C1D2263680007D0F6 /* katongxiaodongwu_03_n.png in Resources */,
+				D84DAA001D2356F600EA180A /* mine_localread.png in Resources */,
 				D8500EAE1D22644B0007D0F6 /* AppIcon29x29~ipad.png in Resources */,
+				D84DAA0D1D2364A200EA180A /* nav_reader_set@2x.png in Resources */,
 				D87B2F6B1D227CDB002FF8F4 /* tiantiansifangmao-04@3x.png in Resources */,
 				D85009171D2251730007D0F6 /* Assets.xcassets in Resources */,
 				D8500EE71D2267830007D0F6 /* 4.jpg in Resources */,
+				D84DA9F71D2352A600EA180A /* mine_share@2x.png in Resources */,
 				D85009671D2263680007D0F6 /* katongxiaodongwu_01_n@2x.png in Resources */,
 				D8500EDC1D2267830007D0F6 /* 1.jpg in Resources */,
 				D85009721D2263680007D0F6 /* katongxiaodongwu_20@3x.png in Resources */,
@@ -808,6 +897,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D84DAA251D23724800EA180A /* XPSoftWareTableController.m in Sources */,
 				D87B2F591D2273B2002FF8F4 /* XPSearchViewController.m in Sources */,
 				D87B2F651D227772002FF8F4 /* XPTabBar.m in Sources */,
 				D87B2F5C1D2273E8002FF8F4 /* XPCicleViewController.m in Sources */,
@@ -815,7 +905,7 @@
 				D87B2F551D22738C002FF8F4 /* XPBookrackViewController.m in Sources */,
 				D8500EEE1D22682D0007D0F6 /* XPWelcomeViewController.m in Sources */,
 				D85009421D2262FA0007D0F6 /* AppDelegate.m in Sources */,
-				D87B2F471D2272AE002FF8F4 /* XPMineTableController.m in Sources */,
+				D84DAA081D235EA300EA180A /* XPMineTableController.m in Sources */,
 				D850090C1D2251730007D0F6 /* main.m in Sources */,
 				D87B2F431D2270D7002FF8F4 /* XPTabBarController.m in Sources */,
 			);
