@@ -7,9 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <JSONKit.h>
 
-@interface XPNovel : JSONDecoder
+@interface XPNovel : NSObject
 /** 图片 */
 @property (nonatomic, strong) NSString *cover;
 /** 书名 */

@@ -43,6 +43,7 @@
 - (void)back
 {
     [self popViewControllerAnimated:YES];
+    [self.tabBarController.tabBar setHidden:NO];
 }
 
 

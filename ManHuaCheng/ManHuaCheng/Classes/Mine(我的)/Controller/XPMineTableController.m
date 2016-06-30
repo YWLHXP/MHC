@@ -12,6 +12,7 @@
 #import <MBProgressHUD.h>
 #import "XPFeedbackViewController.h"
 #import "XPNovelListTableController.h"
+#import "XPAboutMHCViewController.h"
 
 @interface XPMineTableController ()
 @property (strong, nonatomic) IBOutlet UITableViewCell *loginOrRegister;
@@ -174,6 +175,7 @@
             break;
 
         default:
+            [self.navigationController pushViewController:[XPAboutMHCViewController new] animated:YES];
             break;
     }
     [self.tabBarController.tabBar setHidden:YES];
