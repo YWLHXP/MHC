@@ -49,7 +49,7 @@
 -(void)layoutSubviews{
     [super layoutSubviews];
     
-    NSLog(@"%@",self.subviews);
+//    NSLog(@"%@",self.subviews);
     UIView *fView = self.subviews[3];
     UIView *uView = self.subviews[4];
     fView.center = CGPointMake(115, fView.center.y);

@@ -133,6 +133,13 @@
 		D87B2F591D2273B2002FF8F4 /* XPSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D87B2F581D2273B2002FF8F4 /* XPSearchViewController.m */; };
 		D87B2F5C1D2273E8002FF8F4 /* XPCicleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D87B2F5B1D2273E8002FF8F4 /* XPCicleViewController.m */; };
 		D87B2F5F1D227406002FF8F4 /* XPBookcityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D87B2F5E1D227406002FF8F4 /* XPBookcityViewController.m */; };
+		D8A163651D240A2300C4DBCD /* XPNetworkRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = D8A163641D240A2300C4DBCD /* XPNetworkRequest.m */; };
+		D8A163691D240AC000C4DBCD /* XPTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D8A163671D240AC000C4DBCD /* XPTableViewCell.m */; };
+		D8A1636A1D240AC000C4DBCD /* XPTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8A163681D240AC000C4DBCD /* XPTableViewCell.xib */; };
+		D8A1636D1D240AED00C4DBCD /* XPNovelListTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8A1636C1D240AED00C4DBCD /* XPNovelListTableController.m */; };
+		D8A163701D24142C00C4DBCD /* mine_popularity.png in Resources */ = {isa = PBXBuildFile; fileRef = D8A1636E1D24142C00C4DBCD /* mine_popularity.png */; };
+		D8A163711D24142C00C4DBCD /* mine_popularity@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D8A1636F1D24142C00C4DBCD /* mine_popularity@2x.png */; };
+		D8A163741D24146300C4DBCD /* XPNovel.m in Sources */ = {isa = PBXBuildFile; fileRef = D8A163731D24146300C4DBCD /* XPNovel.m */; };
 		D8B59F321D24045800A40BBF /* XPTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = D8B59F311D24045800A40BBF /* XPTabBar.m */; };
 /* End PBXBuildFile section */
 
@@ -287,6 +294,17 @@
 		D87B2F5B1D2273E8002FF8F4 /* XPCicleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPCicleViewController.m; sourceTree = "<group>"; };
 		D87B2F5D1D227406002FF8F4 /* XPBookcityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPBookcityViewController.h; sourceTree = "<group>"; };
 		D87B2F5E1D227406002FF8F4 /* XPBookcityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPBookcityViewController.m; sourceTree = "<group>"; };
+		D8A163631D240A2300C4DBCD /* XPNetworkRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPNetworkRequest.h; sourceTree = "<group>"; };
+		D8A163641D240A2300C4DBCD /* XPNetworkRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPNetworkRequest.m; sourceTree = "<group>"; };
+		D8A163661D240AC000C4DBCD /* XPTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPTableViewCell.h; sourceTree = "<group>"; };
+		D8A163671D240AC000C4DBCD /* XPTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPTableViewCell.m; sourceTree = "<group>"; };
+		D8A163681D240AC000C4DBCD /* XPTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XPTableViewCell.xib; sourceTree = "<group>"; };
+		D8A1636B1D240AED00C4DBCD /* XPNovelListTableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPNovelListTableController.h; sourceTree = "<group>"; };
+		D8A1636C1D240AED00C4DBCD /* XPNovelListTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPNovelListTableController.m; sourceTree = "<group>"; };
+		D8A1636E1D24142C00C4DBCD /* mine_popularity.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mine_popularity.png; sourceTree = "<group>"; };
+		D8A1636F1D24142C00C4DBCD /* mine_popularity@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mine_popularity@2x.png"; sourceTree = "<group>"; };
+		D8A163721D24146300C4DBCD /* XPNovel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPNovel.h; sourceTree = "<group>"; };
+		D8A163731D24146300C4DBCD /* XPNovel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPNovel.m; sourceTree = "<group>"; };
 		D8B59F301D24045800A40BBF /* XPTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPTabBar.h; sourceTree = "<group>"; };
 		D8B59F311D24045800A40BBF /* XPTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPTabBar.m; sourceTree = "<group>"; };
 		E93C1B54920AE1A617674E54 /* Pods-ManHuaCheng.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ManHuaCheng.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ManHuaCheng/Pods-ManHuaCheng.debug.xcconfig"; sourceTree = "<group>"; };
@@ -369,6 +387,8 @@
 		D84DA9E41D2352A600EA180A /* mine */ = {
 			isa = PBXGroup;
 			children = (
+				D8A1636E1D24142C00C4DBCD /* mine_popularity.png */,
+				D8A1636F1D24142C00C4DBCD /* mine_popularity@2x.png */,
 				D84DAA131D23672100EA180A /* nav_back.png */,
 				D84DAA0A1D2364A200EA180A /* nav_reader_set.png */,
 				D84DAA0B1D2364A200EA180A /* nav_reader_set@2x.png */,
@@ -648,6 +668,8 @@
 				D805DAA51D23D8C2000D5EA0 /* XPFeedbackViewController.h */,
 				D805DAA61D23D8C2000D5EA0 /* XPFeedbackViewController.m */,
 				D805DAA71D23D8C2000D5EA0 /* XPFeedbackViewController.xib */,
+				D8A1636B1D240AED00C4DBCD /* XPNovelListTableController.h */,
+				D8A1636C1D240AED00C4DBCD /* XPNovelListTableController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -655,6 +677,10 @@
 		D850093C1D2262FA0007D0F6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				D8A163631D240A2300C4DBCD /* XPNetworkRequest.h */,
+				D8A163641D240A2300C4DBCD /* XPNetworkRequest.m */,
+				D8A163721D24146300C4DBCD /* XPNovel.h */,
+				D8A163731D24146300C4DBCD /* XPNovel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -662,6 +688,9 @@
 		D850093D1D2262FA0007D0F6 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				D8A163661D240AC000C4DBCD /* XPTableViewCell.h */,
+				D8A163671D240AC000C4DBCD /* XPTableViewCell.m */,
+				D8A163681D240AC000C4DBCD /* XPTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -887,6 +916,7 @@
 				D84DAA421D23756900EA180A /* NewTab1_nor@2x.png in Resources */,
 				D805DA9B1D23AFA7000D5EA0 /* XPRegisterViewController.xib in Resources */,
 				D8500EAB1D22644B0007D0F6 /* AppIcon29x29@2x.png in Resources */,
+				D8A163711D24142C00C4DBCD /* mine_popularity@2x.png in Resources */,
 				D8500EE41D2267830007D0F6 /* 1.jpg in Resources */,
 				D84DA9F51D2352A600EA180A /* mine_icon_big_nor@2x.png in Resources */,
 				D84DAA091D235EA300EA180A /* XPMineTableController.xib in Resources */,
@@ -935,6 +965,7 @@
 				D84DAA4D1D23756900EA180A /* NewTab3_nor_blink_s.png in Resources */,
 				D805DAB41D24023D000D5EA0 /* BookrackHeaderView.xib in Resources */,
 				D805DA951D23AA60000D5EA0 /* mine_login_sina.png in Resources */,
+				D8A1636A1D240AC000C4DBCD /* XPTableViewCell.xib in Resources */,
 				D84DA9FD1D2356D200EA180A /* mine_feedback.png in Resources */,
 				D8500EB51D22644B0007D0F6 /* AppIcon57x57.png in Resources */,
 				D84DA9F21D2352A600EA180A /* mine_app.png in Resources */,
@@ -974,6 +1005,7 @@
 				D84DAA041D23570400EA180A /* mine_novel@2x.png in Resources */,
 				D84DAA4B1D23756900EA180A /* NewTab3_nor_blink_k.png in Resources */,
 				D84DAA541D23756900EA180A /* NewTab4_nor@2x.png in Resources */,
+				D8A163701D24142C00C4DBCD /* mine_popularity.png in Resources */,
 				D84DAA471D23756900EA180A /* NewTab2_sel.png in Resources */,
 				D84DAA001D2356F600EA180A /* mine_localread.png in Resources */,
 				D8500EAE1D22644B0007D0F6 /* AppIcon29x29~ipad.png in Resources */,
@@ -1047,6 +1079,7 @@
 				D805DAB81D240245000D5EA0 /* BookrackListModel.m in Sources */,
 				D805DA821D239CD5000D5EA0 /* UIView+XPExtension.m in Sources */,
 				D87B2F5F1D227406002FF8F4 /* XPBookcityViewController.m in Sources */,
+				D8A163691D240AC000C4DBCD /* XPTableViewCell.m in Sources */,
 				D87B2F551D22738C002FF8F4 /* XPBookrackViewController.m in Sources */,
 				D805DAB51D24023D000D5EA0 /* CollectionViewCell.m in Sources */,
 				D805DAC51D2402FD000D5EA0 /* DataManager.m in Sources */,
@@ -1055,9 +1088,12 @@
 				D805DAA11D23BA81000D5EA0 /* XPForgetPasswordViewController.m in Sources */,
 				D805DA7F1D239C75000D5EA0 /* XPNavigationController.m in Sources */,
 				D8500EEE1D22682D0007D0F6 /* XPWelcomeViewController.m in Sources */,
+				D8A1636D1D240AED00C4DBCD /* XPNovelListTableController.m in Sources */,
 				D805DAA81D23D8C2000D5EA0 /* XPFeedbackViewController.m in Sources */,
 				D85009421D2262FA0007D0F6 /* AppDelegate.m in Sources */,
 				D805DAAF1D240179000D5EA0 /* XPCartoonViewController.m in Sources */,
+				D8A163741D24146300C4DBCD /* XPNovel.m in Sources */,
+				D8A163651D240A2300C4DBCD /* XPNetworkRequest.m in Sources */,
 				D84DAA081D235EA300EA180A /* XPMineTableController.m in Sources */,
 				D805DA861D239F6C000D5EA0 /* XPLoginViewController.m in Sources */,
 				D805DA9A1D23AFA7000D5EA0 /* XPRegisterViewController.m in Sources */,

@@ -11,6 +11,7 @@
 #import "XPLoginViewController.h"
 #import <MBProgressHUD.h>
 #import "XPFeedbackViewController.h"
+#import "XPNovelListTableController.h"
 
 @interface XPMineTableController ()
 @property (strong, nonatomic) IBOutlet UITableViewCell *loginOrRegister;
@@ -118,7 +119,6 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
     switch (indexPath.section) {
         case 0:
         {
@@ -162,6 +162,17 @@
             }
         }
             break;
+        case 3:
+        {
+            if (indexPath.row == 0) {
+                
+            }else
+            {
+                [self.navigationController pushViewController:[XPNovelListTableController new] animated:YES];
+            }
+        }
+            break;
+
         default:
             break;
     }

@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-
+typedef void (^MyCallback)(id obj);
 @interface XPNetworkRequest : NSObject
-
++(void)requestNovelListWithCallback:(MyCallback)callback;
 @end
