@@ -7,28 +7,28 @@
 //
 
 #import "XPNetworkRequest.h"
+#import "XPNovel.h"
+#import <AFNetworking.h>
 
 @implementation XPNetworkRequest
 +(void)requestNovelListWithCallback:(MyCallback)callback
 {
     NSString *path = [NSString stringWithFormat:@"http://api.zhuishushenqi.com/outside/book-list?target=comicIsland"];
-    path = [path stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    manager.responseSerializer = [AFHTTPResponseSerializer serializer];
     
-    NSURLRequest *request =[NSURLRequest requestWithURL:[NSURL URLWithString:path]];
     
-    NSURLSession *session = [NSURLSession sharedSession];
-    
-    NSURLSessionDataTask *task = [session dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+    [manager GET:path parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:responseObject options:0 error:nil];
+       //开始解析
+        XPNovel *novel = [[XPNovel alloc] initWithDictionary:dic error:nil];
+        NSLog(@"%@", novel);
+        callback(novel);
         
-        NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
-        NSLog(@"%@",dic);
-        
-        
-        
-              
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        NSLog(@"解析失败");
     }];
 
-    [task resume];
 
 }
 @end

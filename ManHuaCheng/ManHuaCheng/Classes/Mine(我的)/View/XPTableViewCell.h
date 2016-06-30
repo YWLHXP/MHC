@@ -7,7 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "XPNovel.h"
 
 @interface XPTableViewCell : UITableViewCell
-
+@property (weak, nonatomic) IBOutlet UIImageView *cover;
+@property (weak, nonatomic) IBOutlet UILabel *title;
+@property (weak, nonatomic) IBOutlet UILabel *shortIntro;
+@property (weak, nonatomic) IBOutlet UILabel *latelyFollower;
+/** novel */
+@property (nonatomic, strong) XPNovel *novel;
 @end

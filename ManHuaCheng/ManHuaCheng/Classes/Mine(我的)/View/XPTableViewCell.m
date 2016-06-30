@@ -10,6 +10,14 @@
 
 @implementation XPTableViewCell
 
+-(void)setNovel:(XPNovel *)novel
+{
+    _novel = novel;
+    self.title.text = novel.title;
+    self.shortIntro.text = novel.shortIntro;
+    self.latelyFollower.text = novel.latelyFollower;
+}
+
 - (void)awakeFromNib {
     // Initialization code
 }

@@ -35,6 +35,8 @@
     self.navigationItem.title = @"我的";
     
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"nav_reader_set"] style:UIBarButtonItemStylePlain target:self action:@selector(set)];
+    //去掉分割线
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     
 }
 
@@ -42,6 +44,12 @@
 {
     [super viewWillAppear:animated];
     self.navigationController.navigationBar.tintColor = [UIColor colorWithRed:110/255.0 green:111/255.0 blue:112/255.0 alpha:1];
+}
+
+-(void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    [self.tabBarController.tabBar setHidden:YES];
 }
 
 - (void)set
@@ -178,7 +186,7 @@
             [self.navigationController pushViewController:[XPAboutMHCViewController new] animated:YES];
             break;
     }
-    [self.tabBarController.tabBar setHidden:YES];
+    
 }
 
 

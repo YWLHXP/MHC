@@ -9,6 +9,7 @@
 #import "XPNovelListTableController.h"
 #import "XPTableViewCell.h"
 #import "XPNetworkRequest.h"
+#import "XPNovel.h"
 
 @interface XPNovelListTableController ()
 /** 小说列表 */
@@ -25,14 +26,12 @@
         self.novelList = obj;
         [self.tableView reloadData];
     }];
+    
+    [self.tableView registerNib:[UINib nibWithNibName:@"XPTableViewCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:@"cell"];
 }
 
 
 #pragma mark - Table view data source
-
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 1;
-}
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return self.novelList.count;
@@ -40,11 +39,10 @@
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    XPTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
-    if (cell == nil) {
-        cell = [[XPTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
-    }
-    
+    XPTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
+    XPNovel *novel = self.novelList[indexPath.row];
+    cell.novel = novel;
+    NSLog(@"%@", self.novelList);
     return cell;
 }
 

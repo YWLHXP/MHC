@@ -47,6 +47,12 @@
                 <animations/>
             </tableViewCellContentView>
             <animations/>
+            <connections>
+                <outlet property="cover" destination="MJl-bY-9ni" id="jsq-p3-jtg"/>
+                <outlet property="latelyFollower" destination="hfz-en-HK6" id="ONp-ga-3Rz"/>
+                <outlet property="shortIntro" destination="DGN-KF-Qnc" id="Jgg-tQ-FHT"/>
+                <outlet property="title" destination="JFk-Kd-cM7" id="DlD-to-Rd7"/>
+            </connections>
             <point key="canvasLocation" x="340" y="314.5"/>
         </tableViewCell>
     </objects>
