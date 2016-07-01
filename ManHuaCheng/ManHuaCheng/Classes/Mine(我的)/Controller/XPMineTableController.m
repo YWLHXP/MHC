@@ -13,6 +13,7 @@
 #import "XPFeedbackViewController.h"
 #import "XPNovelListTableController.h"
 #import "XPAboutMHCViewController.h"
+#import "XPCartoonViewController.h"
 
 @interface XPMineTableController ()
 @property (strong, nonatomic) IBOutlet UITableViewCell *loginOrRegister;
@@ -169,9 +170,12 @@
         {
             if (indexPath.row == 0) {
                 
-            }else
+            }else if(indexPath.row == 1)
             {
                 [self.navigationController pushViewController:[XPNovelListTableController new] animated:YES];
+            }else
+            {
+                [self.navigationController pushViewController:[XPCartoonViewController new] animated:YES];
             }
         }
             break;
