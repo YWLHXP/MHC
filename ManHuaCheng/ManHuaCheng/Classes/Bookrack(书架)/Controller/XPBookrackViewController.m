@@ -12,6 +12,7 @@
 #import "DataManager.h"
 #import "BookrackListModel.h"
 #import "UIImageView+WebCache.h"
+#import "XPCartoonViewController.h"
 
 #define LeftInset 60
 #define TopInset 5
@@ -148,6 +149,11 @@
     cell.label.text = listModel.bigbook_name;
     
     return cell;
+}
+//调试卡通页面
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
+{
+    [self presentViewController:[[UINavigationController alloc]initWithRootViewController:[[XPCartoonViewController alloc] init]] animated:YES completion:nil];
 }
 
 @end

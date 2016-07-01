@@ -7,6 +7,7 @@
 //
 
 #import "XPBookcityViewController.h"
+#import "XPCartoonViewController.h"
 
 @interface XPBookcityViewController ()
 
@@ -17,8 +18,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.view.backgroundColor = [UIColor whiteColor];
 }
-
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
+{
+    [self presentViewController:[[UINavigationController alloc] initWithRootViewController:[[XPCartoonViewController alloc] init]] animated:YES completion:nil];
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

@@ -42,7 +42,7 @@
     XPTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
     XPNovel *novel = self.novelList[indexPath.row];
     cell.novel = novel;
-    NSLog(@"%@", self.novelList);
+//    NSLog(@"%@", self.novelList);
     return cell;
 }
 

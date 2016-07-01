@@ -9,5 +9,15 @@
 #import "XPNovel.h"
 
 @implementation XPNovel
-
+- (instancetype)initWithDic:(NSDictionary *)dic
+{
+    self = [super init];
+    if (self) {
+        self.cover = dic[@"cover"];
+        self.title = dic[@"title"];
+        self.shortIntro = dic[@"shortIntro"];
+        self.latelyFollower = dic[@"latelyFollower"];
+    }
+    return self;
+}
 @end

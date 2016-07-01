@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "XPNovel.h"
+#import <UIImageView+AFNetworking.h>
 
 @interface XPTableViewCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UIImageView *cover;

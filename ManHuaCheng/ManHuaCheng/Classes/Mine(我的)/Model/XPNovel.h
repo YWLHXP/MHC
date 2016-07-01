@@ -19,4 +19,5 @@
 /** 鲜花数 */
 @property (nonatomic, strong) NSString *latelyFollower;
 
+-(instancetype)initWithDic:(NSDictionary *)dic;
 @end

@@ -22,7 +22,7 @@
         NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:responseObject options:0 error:nil];
        //开始解析
         XPNovel *novel = [[XPNovel alloc] initWithDictionary:dic error:nil];
-        NSLog(@"%@", novel);
+        NSLog(@"%@", dic);
         callback(novel);
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
