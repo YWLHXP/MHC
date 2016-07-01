@@ -15,8 +15,8 @@
     _novel = novel;
     self.title.text = novel.title;
     self.shortIntro.text = novel.shortIntro;
-    self.latelyFollower.text = novel.latelyFollower;
-    [self.cover setImageWithURL:[NSURL URLWithString:novel.cover]];
+    self.latelyFollower.text = [NSString stringWithFormat:@"%d",novel.latelyFollower];
+    [self.cover sd_setImageWithURL:[NSURL URLWithString:novel.cover]];
 }
 
 - (void)awakeFromNib {

@@ -139,17 +139,11 @@
         {
             if (indexPath.row == 0) {
                 [self.navigationController pushViewController:[XPLoginViewController new] animated:YES];
-                MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
-                hud.mode = MBProgressHUDModeText;
-                hud.labelText = NSLocalizedString(@"登录后再去账号中心哦", @"HUD message title");
-                [hud hide:YES afterDelay:2];
+                [self showTooltip:@"登录后再去账号中心哦"];
 
             }else
             {
-                MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
-                hud.mode = MBProgressHUDModeText;
-                hud.labelText = NSLocalizedString(@"登录后再去我的话题哦", @"HUD message title");
-                [hud hide:YES afterDelay:2];
+                [self showTooltip:@"登录后再去我的话题哦"];
 
                  [self.navigationController pushViewController:[XPLoginViewController new] animated:YES];
             }
@@ -189,6 +183,13 @@
     
 }
 
+- (void)showTooltip:(NSString *)tip
+{
+    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
+    hud.mode = MBProgressHUDModeText;
+    hud.labelText = NSLocalizedString(tip, @"HUD message title");
+    [hud hide:YES afterDelay:2];
+}
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {

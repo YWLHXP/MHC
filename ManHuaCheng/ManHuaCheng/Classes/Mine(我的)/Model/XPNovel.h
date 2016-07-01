@@ -7,9 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <JSONModel.h>
 
-@interface XPNovel : JSONModel
+@interface XPNovel : NSObject
 /** 图片 */
 @property (nonatomic, strong) NSString *cover;
 /** 书名 */
@@ -17,7 +16,7 @@
 /** 简介 */
 @property (nonatomic, strong) NSString *shortIntro;
 /** 鲜花数 */
-@property (nonatomic, strong) NSString *latelyFollower;
+@property (nonatomic, assign) int latelyFollower;
 
 -(instancetype)initWithDic:(NSDictionary *)dic;
 @end

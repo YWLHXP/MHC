@@ -81,25 +81,27 @@
         
         [sender setBackgroundImage:[UIImage imageNamed:@"comicDetail_collectBt_nor"] forState:UIControlStateNormal];
        // [self showAlerController:@"很可惜，漫画已从书架删除！"];
-        MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
-        hud.mode = MBProgressHUDModeText;
-        hud.labelText = NSLocalizedString(@"很可惜，漫画已从书架删除！", @"HUD message title");
-        [hud hide:YES afterDelay:2];
+        [self showTooltip:@"很可惜，漫画已从书架删除！"];
         [sender setSelected:NO];
 
     } else {
         [sender setBackgroundImage:[UIImage imageNamed:@"comicDetail_collectBt_hl"] forState:UIControlStateNormal];
        // [self showAlerController:@"添加漫画成功，请进入“书架”查看！"];
-        MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
-        hud.mode = MBProgressHUDModeText;
-        hud.labelText = NSLocalizedString(@"添加漫画成功，请进入“书架”查看！", @"HUD message title");
-        [hud hide:YES afterDelay:2];
+        [self showTooltip:@"添加漫画成功，请进入“书架”查看！"];
         [sender setSelected:NO];
 
         [sender setSelected:YES];
 
         
     }
+}
+
+- (void)showTooltip:(NSString *)tip
+{
+    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
+    hud.mode = MBProgressHUDModeText;
+    hud.labelText = NSLocalizedString(tip, @"HUD message title");
+    [hud hide:YES afterDelay:2];
 }
 
 //显示提示框

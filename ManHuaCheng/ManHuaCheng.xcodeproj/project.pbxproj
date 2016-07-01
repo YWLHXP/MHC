@@ -164,7 +164,6 @@
 		D89C0C591D254DF7004A3DBC /* vdetail_brief_up.png in Resources */ = {isa = PBXBuildFile; fileRef = D89C0C441D254DF7004A3DBC /* vdetail_brief_up.png */; };
 		D89C0C5A1D254DF7004A3DBC /* vdetail_brief_up@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D89C0C451D254DF7004A3DBC /* vdetail_brief_up@2x.png */; };
 		D89C0C5B1D254DF7004A3DBC /* vdetail_read@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D89C0C461D254DF7004A3DBC /* vdetail_read@2x.png */; };
-		D8A163651D240A2300C4DBCD /* XPNetworkRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = D8A163641D240A2300C4DBCD /* XPNetworkRequest.m */; };
 		D8A163691D240AC000C4DBCD /* XPTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D8A163671D240AC000C4DBCD /* XPTableViewCell.m */; };
 		D8A1636A1D240AC000C4DBCD /* XPTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8A163681D240AC000C4DBCD /* XPTableViewCell.xib */; };
 		D8A1636D1D240AED00C4DBCD /* XPNovelListTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8A1636C1D240AED00C4DBCD /* XPNovelListTableController.m */; };
@@ -361,8 +360,6 @@
 		D89C0C441D254DF7004A3DBC /* vdetail_brief_up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = vdetail_brief_up.png; sourceTree = "<group>"; };
 		D89C0C451D254DF7004A3DBC /* vdetail_brief_up@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "vdetail_brief_up@2x.png"; sourceTree = "<group>"; };
 		D89C0C461D254DF7004A3DBC /* vdetail_read@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "vdetail_read@2x.png"; sourceTree = "<group>"; };
-		D8A163631D240A2300C4DBCD /* XPNetworkRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPNetworkRequest.h; sourceTree = "<group>"; };
-		D8A163641D240A2300C4DBCD /* XPNetworkRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPNetworkRequest.m; sourceTree = "<group>"; };
 		D8A163661D240AC000C4DBCD /* XPTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPTableViewCell.h; sourceTree = "<group>"; };
 		D8A163671D240AC000C4DBCD /* XPTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPTableViewCell.m; sourceTree = "<group>"; };
 		D8A163681D240AC000C4DBCD /* XPTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XPTableViewCell.xib; sourceTree = "<group>"; };
@@ -751,8 +748,6 @@
 		D850093C1D2262FA0007D0F6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				D8A163631D240A2300C4DBCD /* XPNetworkRequest.h */,
-				D8A163641D240A2300C4DBCD /* XPNetworkRequest.m */,
 				D8A163721D24146300C4DBCD /* XPNovel.h */,
 				D8A163731D24146300C4DBCD /* XPNovel.m */,
 			);
@@ -1275,7 +1270,6 @@
 				D85009421D2262FA0007D0F6 /* AppDelegate.m in Sources */,
 				D831FC051D25144300B72DFC /* XPAboutMHCViewController.m in Sources */,
 				D8A163741D24146300C4DBCD /* XPNovel.m in Sources */,
-				D8A163651D240A2300C4DBCD /* XPNetworkRequest.m in Sources */,
 				D84DAA081D235EA300EA180A /* XPMineTableController.m in Sources */,
 				D805DA861D239F6C000D5EA0 /* XPLoginViewController.m in Sources */,
 				D805DA9A1D23AFA7000D5EA0 /* XPRegisterViewController.m in Sources */,

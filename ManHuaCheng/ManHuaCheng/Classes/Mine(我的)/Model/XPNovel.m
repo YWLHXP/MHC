@@ -16,8 +16,9 @@
         self.cover = dic[@"cover"];
         self.title = dic[@"title"];
         self.shortIntro = dic[@"shortIntro"];
-        self.latelyFollower = dic[@"latelyFollower"];
+        self.latelyFollower = [dic[@"latelyFollower"] intValue];
     }
     return self;
 }
+
 @end

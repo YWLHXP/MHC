@@ -8,12 +8,12 @@
 
 #import "XPNovelListTableController.h"
 #import "XPTableViewCell.h"
-#import "XPNetworkRequest.h"
 #import "XPNovel.h"
+#import <AFNetworking.h>
 
 @interface XPNovelListTableController ()
 /** 小说列表 */
-@property (nonatomic, strong) NSArray *novelList;
+@property (nonatomic, strong) NSMutableArray *novelList;
 @end
 
 @implementation XPNovelListTableController
@@ -21,11 +21,29 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.navigationItem.title = @"小说";
+    self.novelList = [NSMutableArray array];
+ 
+    NSString *path = [NSString stringWithFormat:@"http://api.zhuishushenqi.com/outside/book-list?target=comicIsland"];
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    manager.responseSerializer = [AFHTTPResponseSerializer serializer];
     
-    [XPNetworkRequest requestNovelListWithCallback:^(id obj) {
-        self.novelList = obj;
-        [self.tableView reloadData];
+    
+    [manager GET:path parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:responseObject options:0 error:nil];
+      
+        NSLog(@"%@", dic);
+        NSArray *novel = dic[@"books"];
+        for (NSDictionary *dicBook in novel) {
+            XPNovel *n = [[XPNovel alloc] initWithDic:dicBook];
+            [self.novelList addObject:n];
+            [self.tableView reloadData];
+        }
+       
+        
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        NSLog(@"解析失败");
     }];
+    
     
     [self.tableView registerNib:[UINib nibWithNibName:@"XPTableViewCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:@"cell"];
 }
@@ -40,9 +58,9 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     XPTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
-    XPNovel *novel = self.novelList[indexPath.row];
-    cell.novel = novel;
-//    NSLog(@"%@", self.novelList);
+    
+    XPNovel *n = self.novelList[indexPath.row];
+    cell.novel = n;
     return cell;
 }
 
