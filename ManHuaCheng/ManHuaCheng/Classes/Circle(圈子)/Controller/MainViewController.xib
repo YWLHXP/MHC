@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainViewController">
+            <connections>
+                <outlet property="Mysvc" destination="pR4-sD-ode" id="gTP-VW-aaP"/>
+                <outlet property="MytabrVC" destination="r8D-5b-DM3" id="y4E-LM-05O"/>
+                <outlet property="leftbtn" destination="cZp-le-b9f" id="xXk-ac-3jx"/>
+                <outlet property="leftimage" destination="pIu-9S-JWK" id="a4r-nh-EGR"/>
+                <outlet property="rightBtn" destination="qED-pd-zin" id="tvn-zx-x8X"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pR4-sD-ode">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <animations/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="ZNI-hs-XN5"/>
+                    </connections>
+                </scrollView>
+            </subviews>
+            <animations/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="pR4-sD-ode" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="8i5-S6-IY7"/>
+                <constraint firstAttribute="bottom" secondItem="pR4-sD-ode" secondAttribute="bottom" id="YlX-Cg-f8Y"/>
+                <constraint firstAttribute="trailing" secondItem="pR4-sD-ode" secondAttribute="trailing" id="kU7-8A-FKd"/>
+                <constraint firstItem="pR4-sD-ode" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="nZi-My-oyK"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+            <point key="canvasLocation" x="352.5" y="435.5"/>
+        </view>
+        <view contentMode="scaleToFill" id="r8D-5b-DM3">
+            <rect key="frame" x="0.0" y="0.0" width="150" height="38"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <button opaque="NO" tag="10" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cZp-le-b9f">
+                    <rect key="frame" x="8" y="0.0" width="46" height="30"/>
+                    <animations/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <state key="normal" title="关注">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="highlighted" title="关注">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="button:" destination="-1" eventType="touchUpInside" id="Gki-q4-d9h"/>
+                    </connections>
+                </button>
+                <button opaque="NO" tag="11" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qED-pd-zin">
+                    <rect key="frame" x="98" y="0.0" width="44" height="30"/>
+                    <animations/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <state key="normal" title="广场">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="highlighted" title="广场">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="button:" destination="-1" eventType="touchUpInside" id="iZD-Mr-Sfz"/>
+                    </connections>
+                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="v3_circle_neko.png" translatesAutoresizingMaskIntoConstraints="NO" id="pIu-9S-JWK">
+                    <rect key="frame" x="5" y="17" width="50" height="21"/>
+                    <animations/>
+                </imageView>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kgR-uw-sSh">
+                    <rect key="frame" x="72" y="8" width="1" height="22"/>
+                    <animations/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+            </subviews>
+            <animations/>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="660" y="229"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="v3_circle_neko.png" width="30" height="20"/>
+    </resources>
+</document>

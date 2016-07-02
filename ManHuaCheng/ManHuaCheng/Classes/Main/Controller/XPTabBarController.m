@@ -10,7 +10,7 @@
 #import "XPBookrackViewController.h"
 #import "XPBookcityViewController.h"
 #import "XPSearchViewController.h"
-#import "XPCicleViewController.h"
+#import "MainViewController.h"
 #import "XPMineTableController.h"
 #import "XPNavigationController.h"
 #import "XPTabBar.h"
@@ -50,7 +50,7 @@
     
     
     //圈子
-    [self addOneChildViewController:[[UINavigationController alloc] initWithRootViewController: [[XPCicleViewController alloc] init]] image:[UIImage imageNamed:@"NewTab4_nor"] selImage:[UIImage imageNamed:@"NewTab4_sel"] withtitle:@"圈子"];
+    [self addOneChildViewController:[[UINavigationController alloc] initWithRootViewController: [[MainViewController alloc] init]] image:[UIImage imageNamed:@"NewTab4_nor"] selImage:[UIImage imageNamed:@"NewTab4_sel"] withtitle:@"圈子"];
     
     //我的
     [self addOneChildViewController:[[XPNavigationController alloc] initWithRootViewController: [[XPMineTableController alloc] init]] image:[UIImage imageNamed:@"NewTab5_nor"] selImage:[UIImage imageNamed:@"NewTab5_sel"] withtitle:@"我的"];
