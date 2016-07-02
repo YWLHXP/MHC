@@ -14,6 +14,8 @@
 #import "XPNovelListTableController.h"
 #import "XPAboutMHCViewController.h"
 #import "XPCartoonViewController.h"
+#import "XPNavigationController.h"
+#import "HLActionSheet.h"
 
 @interface XPMineTableController ()
 @property (strong, nonatomic) IBOutlet UITableViewCell *loginOrRegister;
@@ -153,13 +155,15 @@
         case 2:
         {
             if (indexPath.row == 0) {
-                UIAlertController *alert = [UIAlertController alertControllerWithTitle:nil message:nil preferredStyle:UIAlertControllerStyleActionSheet];
+                NSArray *titles = @[@"微信好友",@"新浪微博",@"微信朋友圈",@"QQ空间",@"QQ",@"微信收藏"];
+                NSArray *imageNames = @[@"sns_icon_22",@"sns_icon_1",@"sns_icon_23",@"sns_icon_6",@"sns_icon_24",@"sns_icon_37"];
+                HLActionSheet *sheet = [[HLActionSheet alloc] initWithTitles:titles iconNames:imageNames];
+                [sheet showActionSheetWithClickBlock:^(int btnIndex) {
+                    NSLog(@"btnIndex:%d",btnIndex);
+                } cancelBlock:^{
+                    NSLog(@"取消");
+                }];
 
-                                         
-                UIAlertAction *shareAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleDefault handler:nil];
-        
-                [alert addAction:shareAction];
-                [self presentViewController:alert animated:YES completion:nil];
             }else
             {
                 [self.navigationController pushViewController:[XPFeedbackViewController new] animated:YES];
@@ -175,7 +179,9 @@
                 [self.navigationController pushViewController:[XPNovelListTableController new] animated:YES];
             }else
             {
-                [self.navigationController pushViewController:[XPCartoonViewController new] animated:YES];
+//                [self.navigationController pushViewController:[XPCartoonViewController new] animated:YES];
+                [self presentViewController:[[XPNavigationController alloc]initWithRootViewController:[[XPCartoonViewController alloc] init]] animated:YES completion:nil];
+                
             }
         }
             break;

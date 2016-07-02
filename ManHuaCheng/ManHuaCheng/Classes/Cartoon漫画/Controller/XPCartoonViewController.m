@@ -70,7 +70,7 @@
 
 
 - (void)onLeftBtn:(UIBarButtonItem *)sender{
-    
+
     [self dismissViewControllerAnimated:YES completion:nil];
     
 }
