@@ -12,7 +12,6 @@
 #import "DataManager.h"
 #import "BookrackListModel.h"
 #import "UIImageView+WebCache.h"
-#import "XPCartoonViewController.h"
 
 #define LeftInset 60
 #define TopInset 5
@@ -66,18 +65,18 @@
     
     //设置表尾视图
     UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
-    flowLayout.minimumInteritemSpacing = 12;
-    flowLayout.minimumLineSpacing = 12;
-    flowLayout.sectionInset = UIEdgeInsetsMake(0, 15, 10, 15);
-    flowLayout.itemSize = CGSizeMake((XPScreenWidth-78)/3, XPScreenWidth*150/375);
-    self.collectionView = [[UICollectionView alloc]initWithFrame:CGRectMake(0, 0 , XPScreenWidth, self.view.bounds.size.height - 64 - 49 ) collectionViewLayout:flowLayout];
+    flowLayout.minimumInteritemSpacing = 10;
+    flowLayout.minimumLineSpacing = 25;
+    flowLayout.sectionInset = UIEdgeInsetsMake(5, 20, 5, 20);
+    flowLayout.itemSize = CGSizeMake((XPScreenWidth-78)/3, XPScreenWidth*120/375);
+    self.collectionView = [[UICollectionView alloc]initWithFrame:CGRectMake(0, 0 , XPScreenWidth, self.view.bounds.size.height - 80) collectionViewLayout:flowLayout];
     [self.view addSubview:self.collectionView];
     
     self.collectionView.delegate = self;
     self.collectionView.dataSource = self;
-    //self.collectionView.hidden = NO;
-    [self.collectionView registerClass:[CollectionViewCell class] forCellWithReuseIdentifier:@"Bookrack"];
+    [self.collectionView registerClass:[CollectionViewCell class] forCellWithReuseIdentifier:@"BR"];
     self.collectionView.backgroundColor = [UIColor whiteColor];
+    self.collectionView.scrollEnabled = NO;
     
     tv.tableFooterView = self.collectionView;
     
@@ -130,8 +129,7 @@
 }
 
 #pragma mark - CollectionView DataSource
--(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
-{
+-(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
     if (collectionView == self.collectionView) {
         return self.ListArray.count;
     }
@@ -140,20 +138,29 @@
     }
 }
 
--(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
-{
+-(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     BookrackListModel *listModel = [self.ListArray objectAtIndex:indexPath.item];
     
-    CollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"Bookrack" forIndexPath:indexPath];
-    [cell.imageView sd_setImageWithURL:[NSURL URLWithString:listModel.coverurl]placeholderImage:[UIImage imageNamed:@"placeholder_comicCover"]];
+    CollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"BR" forIndexPath:indexPath];
+    [cell.imageView sd_setImageWithURL:[NSURL URLWithString:listModel.coverurl]placeholderImage:[UIImage imageNamed:@"place_hold_img_v"]];
     cell.label.text = listModel.bigbook_name;
     
     return cell;
 }
-//调试卡通页面
-- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
-{
-    [self presentViewController:[[UINavigationController alloc]initWithRootViewController:[[XPCartoonViewController alloc] init]] animated:YES completion:nil];
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
 }
+
+/*
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 @end
