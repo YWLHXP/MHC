@@ -33,7 +33,8 @@
     [self addAllChildViewController];
     
      self.tabBar.tintColor = [UIColor redColor];
-    
+    //默认选中页
+    self.selectedIndex = 1;
     
 }
 
