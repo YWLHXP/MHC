@@ -16,6 +16,10 @@
 #define LeftInset 60
 #define TopInset 5
 #define NaviHeight 44
+#define ItemSpace 15
+#define LineSpace 25
+#define ItemHeight 130
+#define TabBarHeight 49
 
 @interface XPBookrackViewController ()<UITableViewDelegate,UITableViewDataSource,UICollectionViewDelegate,UICollectionViewDataSource>
 
@@ -65,13 +69,12 @@
     
     //设置表尾视图
     UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
-    flowLayout.minimumInteritemSpacing = 10;
-    flowLayout.minimumLineSpacing = 25;
-    flowLayout.sectionInset = UIEdgeInsetsMake(5, 20, 5, 20);
-    flowLayout.itemSize = CGSizeMake((XPScreenWidth-78)/3, XPScreenWidth*120/375);
-    self.collectionView = [[UICollectionView alloc]initWithFrame:CGRectMake(0, 0 , XPScreenWidth, self.view.bounds.size.height - 80) collectionViewLayout:flowLayout];
-    [self.view addSubview:self.collectionView];
+    flowLayout.minimumInteritemSpacing = ItemSpace;
+    flowLayout.minimumLineSpacing = LineSpace;
+    flowLayout.sectionInset = UIEdgeInsetsMake(TopInset, 20, TopInset, 20);
+    flowLayout.itemSize = CGSizeMake((XPScreenWidth-70)/3, ItemHeight);
     
+    self.collectionView = [[UICollectionView alloc]initWithFrame:CGRectMake(0, 0 , XPScreenWidth, XPScreenHeight-TabBarHeight+TopInset) collectionViewLayout:flowLayout];
     self.collectionView.delegate = self;
     self.collectionView.dataSource = self;
     [self.collectionView registerClass:[CollectionViewCell class] forCellWithReuseIdentifier:@"BR"];
@@ -84,8 +87,6 @@
     
     self.tableView = tv;
     
-    
-    
     //发送请求
     [self sendRequestToServer];
     
@@ -93,22 +94,21 @@
 }
 
 -(void)sendRequestToServer{
-    NSDictionary *params=@{
-                           @"appVersionName":@"3.4.7",
+    NSDictionary *params=@{@"appVersionName":@"3.4.7",
                            @"channel":@"appstore",
                            @"channelId":@"appstore",
                            @"apptype":@"1",
                            @"appversion":@"3.4.7",
                            @"osVersionCode":@"9.2.1",
                            @"timestamp":@"1467199092.895776",
-                           @"mobileModel":@"iPhone7,2",
-                           };
+                           @"mobileModel":@"iPhone7,2",};
     
     [NetworkManager sendRequestWithUrl:@"http://mhjk.1391.com/comic/gltj_v2" parameters:params success:^(id responseObject) {
         self.ListArray = [DataManager getBookrackListData:responseObject];
         [self.collectionView reloadData];
     } failure:^(NSError *error) {
         NSLog(@"服务器请求失败:%@", error.userInfo);
+        [self sendRequestToServer];
     }];
 }
 

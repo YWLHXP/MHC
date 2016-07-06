@@ -11,10 +11,12 @@
 #import "XPCartoonSectionsTV.h"
 #import "XPCartoonDiscussTV.h"
 #import "XPCartoonRecommendCV.h"
-#import <MBProgressHUD.h>
-//#import <AwAlertViewlib/AwAlertViewlib.h>
+#import "XPCartoonActionV.h"
+#import "XPPassRoadDetailViewController.h"
 
-@interface XPCartoonViewController ()
+#import <MBProgressHUD.h>
+
+@interface XPCartoonViewController ()<UIScrollViewDelegate>
 @property (strong, nonatomic) IBOutlet UIView *middleHV;//四个按钮底部view
 @property (strong, nonatomic) IBOutlet UIView *HeaderView;
 @property (strong, nonatomic) IBOutlet UIView *MiddleView;
@@ -30,13 +32,20 @@
 @property (nonatomic, strong) XPCartoonSectionsTV *cartoonSectionsTV;
 @property (nonatomic, strong) XPCartoonRecommendCV *cartoonRecommendCV;
 @property (nonatomic, strong) XPCartoonDiscussTV *cartoonDiscussTV;
+@property (nonatomic, strong) XPCartoonActionV *cartoonActionV;
+@property (strong, nonatomic) IBOutlet NSLayoutConstraint *middleSVContraint;
+@property (strong, nonatomic) UIImageView *imgView;
+@property (strong, nonatomic) NSMutableArray<UIButton *> *btnArray;
+@property (strong, nonatomic) IBOutlet NSLayoutConstraint *footViewConstraint;
+@property (strong, nonatomic) IBOutlet NSLayoutConstraint *headerViewConstraint;
 
-
-//@property (strong, nonatomic) IBOutlet NSLayoutConstraint *DetailHeigth;//漫画头部简介详情的高度
+@property (strong, nonatomic) UISwipeGestureRecognizer *swipUp;
+@property (strong, nonatomic) UISwipeGestureRecognizer *swipDown;
 
 @end
 
 @implementation XPCartoonViewController
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -57,20 +66,94 @@
     self.CartoonImageView.layer.borderColor = [UIColor lightGrayColor].CGColor;
     self.CartoonImageView.layer.borderWidth = .5;
     
+    
+    _btnArray = [NSMutableArray array];
     [self showFourButton];
     
-}
-
-
-- (void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:YES];
+    
+    //添加手势动画
+    [self addSwipeGesture];
+    
+    
+    //self.middleScrollView.decelerating
+    
+    
     
 }
+
+#pragma mark - 添加手势动画
+- (void) addSwipeGesture
+{
+    
+    
+    _swipUp = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(onSwipeGesture:)];
+    _swipUp.direction = UISwipeGestureRecognizerDirectionUp;
+    //swipUp.delegate = self;
+    [self.view addGestureRecognizer:_swipUp];
+    
+    _swipDown = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(onSwipeGesture:)];
+    _swipDown.direction= UISwipeGestureRecognizerDirectionDown;
+    //swipDown.delegate = self;
+    [self.view addGestureRecognizer:_swipDown];
+    
+    //手势冲突解决方案
+    [self.cartoonSectionsTV.panGestureRecognizer requireGestureRecognizerToFail:_swipUp];
+    [self.cartoonDiscussTV.panGestureRecognizer requireGestureRecognizerToFail:_swipUp];
+    [self.cartoonSectionsTV.panGestureRecognizer requireGestureRecognizerToFail:_swipDown];
+    [self.cartoonDiscussTV.panGestureRecognizer requireGestureRecognizerToFail:_swipDown];
+    
+    
+}
+
+
+#pragma mark - 移动手势
+- (void)onSwipeGesture:(UISwipeGestureRecognizer *)swipe
+{
+    
+    
+    CGPoint starPoint;
+    CGPoint stopPoint;
+    CGFloat space = 0.0;
+    if (swipe.state == UIGestureRecognizerStateBegan) {
+        starPoint = [swipe locationInView:self.view];
+    }else if(swipe.state == UIGestureRecognizerStateEnded){
+        stopPoint = [swipe locationInView:self.view];
+        space = stopPoint.y - starPoint.y;
+    }
+    
+
+    if (swipe.direction == UISwipeGestureRecognizerDirectionUp) {
+        self.footViewConstraint.constant = -50;
+        NSLog(@"up");
+        
+        [UIView animateWithDuration:3. animations:^{
+            self.headerViewConstraint.constant = - self.superHeaderView.constant - 64;
+            self.navigationController.navigationBar.hidden = YES;
+            
+        }];
+        
+        
+    }else if(swipe.direction == UISwipeGestureRecognizerDirectionDown){
+        self.footViewConstraint.constant = 0;
+        NSLog(@"Down");
+       
+        [UIView animateWithDuration:3. animations:^{
+            self.navigationController.navigationBar.hidden = NO;
+            self.headerViewConstraint.constant = 0;
+            
+        }];
+    
+        
+        
+    }
+    
+}
+
+
 
 
 - (void)onLeftBtn:(UIBarButtonItem *)sender{
-
+    
     [self dismissViewControllerAnimated:YES completion:nil];
     
 }
@@ -80,36 +163,20 @@
     if (sender.selected) {
         
         [sender setBackgroundImage:[UIImage imageNamed:@"comicDetail_collectBt_nor"] forState:UIControlStateNormal];
-       // [self showAlerController:@"很可惜，漫画已从书架删除！"];
+        
         [self showTooltip:@"很可惜，漫画已从书架删除！"];
         [sender setSelected:NO];
 
     } else {
         [sender setBackgroundImage:[UIImage imageNamed:@"comicDetail_collectBt_hl"] forState:UIControlStateNormal];
-       // [self showAlerController:@"添加漫画成功，请进入“书架”查看！"];
-        [self showTooltip:@"添加漫画成功，请进入“书架”查看！"];
-        [sender setSelected:NO];
 
+        [self showTooltip:@"添加漫画成功，请进入“书架”查看！"];
         [sender setSelected:YES];
 
         
     }
 }
 
-- (void)showTooltip:(NSString *)tip
-{
-    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
-    hud.mode = MBProgressHUDModeText;
-    hud.labelText = NSLocalizedString(tip, @"HUD message title");
-    [hud hide:YES afterDelay:2];
-}
-
-//显示提示框
-//- (void)showAlerController:(NSString *) str {
-//    AwTipView *tipView=[[AwTipView alloc]initWithView:self.view title:str message:nil posY:XPScreenHeight - 280];
-//    tipView.showTime=2;
-//    [tipView showAnimated:YES];
-//}
 
 //文本按钮
 - (IBAction)DetailLableShowTextWithButton:(UIButton *)sender {
@@ -137,6 +204,7 @@
 
 }
 
+//四个按钮和页面
 - (void)showFourButton
 {
     NSArray *array = @[@"章节",@"评论",@"推荐",@"活动"];
@@ -148,7 +216,10 @@
         btn.frame = CGRectMake((width + 2) * i, 5, width, 30);
         [btn setTitleColor:[UIColor grayColor] forState:UIControlStateNormal ];
         btn.titleLabel.font = [UIFont systemFontOfSize:15];
+        btn.tag = i + 100;
         [btn setTitle:array[i] forState:UIControlStateNormal];
+        [btn addTarget:self action:@selector(onSelectedButton:) forControlEvents:UIControlEventTouchUpInside];
+        [_btnArray addObject:btn];
         
         if (i < 3) {
             UIImageView *img = [[UIImageView alloc] initWithFrame:CGRectMake(width + (width + 2) * i, 0, 2, 40)];
@@ -160,17 +231,86 @@
     self.middleHV.layer.borderColor = [UIColor lightGrayColor].CGColor;
     
     //scrollView初始化
+    self.middleSVContraint.constant = XPScreenHeight - 55;
     self.middleScrollView.contentSize = CGSizeMake(XPScreenWidth * 4, 0);
-    CGFloat scrootHeigth = self.middleScrollView.frame.size.height;
-    self.cartoonSectionsTV.frame = CGRectMake(0, 0, XPScreenWidth, scrootHeigth);
+    self.middleScrollView.delegate = self;
+    
+    self.cartoonSectionsTV = [[XPCartoonSectionsTV alloc] initWithFrame:CGRectMake(0, 0, XPScreenWidth, XPScreenHeight)];
     [self.middleScrollView addSubview:self.cartoonSectionsTV];
-    self.cartoonDiscussTV.frame = CGRectMake(XPScreenWidth, 0, XPScreenWidth, scrootHeigth);
+    
+    self.cartoonDiscussTV = [[XPCartoonDiscussTV alloc] initWithFrame:CGRectMake(XPScreenWidth, 0, XPScreenWidth, XPScreenHeight)];
     [self.middleScrollView addSubview:self.cartoonDiscussTV];
-    self.cartoonRecommendCV.frame = CGRectMake(XPScreenWidth * 2, 0, XPScreenWidth, scrootHeigth);
+    
+    self.cartoonRecommendCV = [[XPCartoonRecommendCV alloc] initWithFrame:CGRectMake(XPScreenWidth * 2, 0, XPScreenWidth, XPScreenHeight)];
     [self.middleScrollView addSubview:self.cartoonRecommendCV];
+    
+    self.cartoonActionV = [[XPCartoonActionV alloc] initWithFrame:CGRectMake(XPScreenWidth * 3, 0, XPScreenWidth, XPScreenHeight)];
+    
+    [self.middleScrollView addSubview:self.cartoonActionV];
+    
+    //设置移动图
+    
+    _imgView = [[UIImageView alloc] initWithFrame:CGRectMake(0, _middleHV.frame.size.height - 8, (XPScreenWidth- 6)/4, 8)];
+    [_middleHV addSubview:_imgView];
+    _imgView.image = [UIImage imageNamed:@"navigationSelLine"];
+    
+    //添加通知
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onNotification:) name:@"PASSVIEW" object:nil];
     
 }
 
+#pragma mark - scrollView的移动动画
+
+- (void)scrollViewWillEndDragging:(UIScrollView *)scrollView withVelocity:(CGPoint)velocity targetContentOffset:(inout CGPoint *)targetContentOffset
+{
+    if (scrollView == self.middleScrollView) {
+        int num = targetContentOffset->x / scrollView.frame.size.width ;
+        [UIView animateWithDuration:0.3 animations:^{
+            CGRect f = _imgView.frame;
+            f.origin.x = num *(scrollView.frame.size.width/4);
+            _imgView.frame = f;
+        }];
+    }
+}
+
+#pragma mark - 四个按钮的点击事件
+- (void)onSelectedButton:(UIButton *)sender
+{
+    for (UIButton *btn in _btnArray) {
+        if (sender.tag == btn.tag) {
+            //动画
+            [UIView animateWithDuration:0.3 animations:^{
+                CGRect f = _imgView.frame;
+                f.origin.x = (btn.tag-100) *(_middleHV.frame.size.width/4);
+                _imgView.frame = f;
+                _middleScrollView.contentOffset = CGPointMake((btn.tag-100)*XPScreenWidth, 0);
+            }];
+            
+            
+        }
+    }
+    
+}
+
+- (void)onNotification:(NSNotification *)notification
+{
+    if ([notification.userInfo[@"senderBool"] boolValue]== NO) {
+        [self presentViewController:[[UINavigationController alloc] initWithRootViewController:[[XPPassRoadDetailViewController alloc] init]] animated:YES completion:nil];
+    }
+}
+
+- (void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:@"PASSVIEW" object:nil];
+}
+
+- (void)showTooltip:(NSString *)tip
+{
+    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
+    hud.mode = MBProgressHUDModeText;
+    hud.labelText = NSLocalizedString(tip, @"HUD message title");
+    [hud hide:YES afterDelay:2];
+}
 
 
 @end

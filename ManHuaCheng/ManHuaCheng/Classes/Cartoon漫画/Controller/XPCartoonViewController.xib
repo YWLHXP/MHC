@@ -13,7 +13,10 @@
                 <outlet property="MiddleView" destination="Y2h-SA-JMT" id="61p-bn-b06"/>
                 <outlet property="detailLable" destination="bap-VT-Ibx" id="vBg-3q-bt9"/>
                 <outlet property="footView" destination="FXF-ef-6uH" id="lGb-fB-qb1"/>
+                <outlet property="footViewConstraint" destination="WsK-Xk-B4l" id="8Ur-dx-yJd"/>
+                <outlet property="headerViewConstraint" destination="dG2-GA-IZb" id="keI-AG-nZr"/>
                 <outlet property="middleHV" destination="B5t-pX-DNg" id="PJ1-e0-avq"/>
+                <outlet property="middleSVContraint" destination="BRr-r1-hMO" id="nXJ-5b-yek"/>
                 <outlet property="middleScrollView" destination="U6b-2p-JDO" id="KtF-Qb-PdL"/>
                 <outlet property="superHeaderView" destination="3Kh-Lt-4JM" id="LAV-jf-H5d"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -273,15 +276,14 @@
                             </constraints>
                         </view>
                         <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U6b-2p-JDO">
-                            <rect key="frame" x="0.0" y="55" width="600" height="545"/>
+                            <rect key="frame" x="0.0" y="55" width="600" height="600"/>
                             <animations/>
-                            <color key="backgroundColor" red="1" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                         </scrollView>
                     </subviews>
                     <animations/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
-                        <constraint firstAttribute="bottom" secondItem="U6b-2p-JDO" secondAttribute="bottom" id="4jL-FP-ybR"/>
+                        <constraint firstAttribute="bottom" secondItem="U6b-2p-JDO" secondAttribute="bottom" constant="-55" id="4jL-FP-ybR"/>
                         <constraint firstAttribute="height" constant="600" id="BRr-r1-hMO"/>
                         <constraint firstAttribute="trailing" secondItem="U6b-2p-JDO" secondAttribute="trailing" id="Cau-Xp-y6E"/>
                         <constraint firstItem="B5t-pX-DNg" firstAttribute="top" secondItem="Y2h-SA-JMT" secondAttribute="top" id="OIz-YY-lmx"/>

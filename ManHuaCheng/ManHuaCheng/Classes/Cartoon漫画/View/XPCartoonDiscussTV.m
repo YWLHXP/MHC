@@ -13,6 +13,8 @@
 {
     if (self = [super initWithFrame:frame]) {
         self.backgroundColor = [UIColor blueColor];
+   
+       
     }
     return self;
     
