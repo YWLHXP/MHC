@@ -7,6 +7,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="XPRegisterViewController">
             <connections>
+                <outlet property="nameTextField" destination="C4Y-5D-V0q" id="g0J-kN-BYb"/>
+                <outlet property="onePWTextField" destination="U65-dx-LRv" id="NbK-wa-fwc"/>
+                <outlet property="twoTextField" destination="wae-rj-AY1" id="swi-U1-oIH"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -116,6 +119,9 @@
                     <state key="normal" title="注册" backgroundImage="mine_login_autobt_back.png">
                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <connections>
+                        <action selector="registerBtn:" destination="-1" eventType="touchUpInside" id="Ku4-6V-7vO"/>
+                    </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="已有账号？马上" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VCs-BI-PRD">
                     <rect key="frame" x="450" y="509" width="95" height="35"/>

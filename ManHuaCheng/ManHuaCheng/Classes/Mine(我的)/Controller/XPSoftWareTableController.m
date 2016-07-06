@@ -7,6 +7,7 @@
 //
 
 #import "XPSoftWareTableController.h"
+#import <MBProgressHUD.h>
 
 @interface XPSoftWareTableController ()
 
@@ -19,7 +20,55 @@
     
     self.navigationItem.title = @"软件设置";
     self.navigationController.navigationBar.tintColor = [UIColor colorWithRed:234/255.0 green:235/255.0 blue:237/255.0 alpha:1];
-    [self.tabBarController.tabBar setHidden:YES];
+    
+    self.tableView.tableFooterView = [self tableFootView];
+    if ([BmobUser getCurrentUser]) {
+        
+        [self.tableView.tableFooterView setHidden:NO];
+    }else
+    {
+        [self.tableView.tableFooterView setHidden:YES];
+    }
+
+}
+
+- (UIView *)tableFootView
+{
+    
+    UIButton *btn = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 44)];
+    [btn setTitle:@"退出当前登录" forState:UIControlStateNormal];
+    [btn setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
+    [btn addTarget:self action:@selector(loginOut) forControlEvents:UIControlEventTouchUpInside];
+    btn.backgroundColor = [UIColor grayColor];
+    return (UIView *)btn;
+}
+
+- (void)loginOut
+{
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"提示" message:@"你确定要注销登录吗？" preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *action = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleDefault handler:nil];
+    UIAlertAction *action2 = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        [BmobUser logout];
+        [self.navigationController popViewControllerAnimated:YES];
+        [self showTooltip:@"登出成功"];
+    }];
+     [alert addAction:action];
+     [alert addAction:action2];
+     [self presentViewController:alert animated:YES completion:nil];
+    
+}
+
+- (void)showTooltip:(NSString *)tip
+{
+    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
+    hud.mode = MBProgressHUDModeText;
+    hud.labelText = NSLocalizedString(tip, @"HUD message title");
+    [hud hide:YES afterDelay:2];
+}
+
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
 }
 
 #pragma mark - Table view data source
@@ -43,6 +92,7 @@
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"cell"];
     }
+    
     if (indexPath.section == 0) {
         if (indexPath.row == 0) {
             cell.textLabel.text = @"横竖屏设置";
@@ -172,6 +222,21 @@
     
 }
 
+//无用
+//- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
+//{
+//    if (section == 1) {
+//        UIButton *btn = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 20)];
+//        btn.backgroundColor = [UIColor redColor];
+//        [btn setTitle:@"退出当前登录" forState:UIControlStateNormal];
+//        return (UIView *)btn;
+//    }else
+//    {
+//        return 0;
+//    }
+//    
+//}
+
 - (UIView *)backViewWithTitle:(NSString *)title
 {
     UIView *view = [[UIView alloc] init];
@@ -239,5 +304,6 @@
 {
     
 }
+
 
 @end

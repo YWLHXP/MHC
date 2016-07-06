@@ -14,20 +14,25 @@ PODS:
   - AFNetworking/Serialization (3.1.0)
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
+  - BmobSDK (1.7.1)
   - JSONModel (1.2.0)
   - MBProgressHUD (0.9.2)
   - YYText (1.0.5)
 
 DEPENDENCIES:
   - AFNetworking
+  - BmobSDK
   - JSONModel
   - MBProgressHUD
   - YYText
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  BmobSDK: ebc3cb46b90d746f23121e9ea058a3122b85861f
   JSONModel: 12523685c4b623553ccf844bbbf7007624317b2c
   MBProgressHUD: 1569cf7ace17a8bac47aabfbb8580a49690386d1
   YYText: ac09660c9ccd9b817f409a20caa6f5587444d2ae
 
-COCOAPODS: 0.39.0
+PODFILE CHECKSUM: 8933a09790c5b57ea2b4636826f044440ab5831a
+
+COCOAPODS: 1.0.1

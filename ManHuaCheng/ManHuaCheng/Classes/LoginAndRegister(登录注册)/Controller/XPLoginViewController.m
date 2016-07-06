@@ -9,12 +9,45 @@
 #import "XPLoginViewController.h"
 #import "XPRegisterViewController.h"
 #import "XPForgetPasswordViewController.h"
+#import "AppDelegate.h"
+#import "XPTabBarController.h"
 
 @interface XPLoginViewController ()
-
+@property (weak, nonatomic) IBOutlet UIButton *loginBtn;
+@property (weak, nonatomic) IBOutlet UITextField *nameTextField;
+@property (weak, nonatomic) IBOutlet UITextField *pwdTextField;
 @end
 
 @implementation XPLoginViewController
+
+//登录按钮
+- (IBAction)login:(id)sender {
+    [BmobUser loginInbackgroundWithAccount:self.nameTextField.text andPassword:self.pwdTextField.text block:^(BmobUser *user, NSError *error) {
+        
+        if (user) {
+            //添加显示首页的代码
+            AppDelegate *app = (AppDelegate *)[UIApplication sharedApplication].delegate;
+            app.window.rootViewController = [[XPTabBarController alloc] init];
+        }
+        
+        if (error) {
+            UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"提示" message:[error localizedDescription] preferredStyle:UIAlertControllerStyleAlert];
+            
+            UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil];
+            
+            UIAlertAction *confirm = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action){
+                //确定时做的事
+            }];
+            
+            [alert addAction:cancel];
+            [alert addAction:confirm];
+            [self presentViewController:alert animated:YES completion:nil];
+        }
+    }];
+}
+- (IBAction)free:(id)sender {
+    NSLog(@"该功能暂未实现，敬请期待哦~");
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];

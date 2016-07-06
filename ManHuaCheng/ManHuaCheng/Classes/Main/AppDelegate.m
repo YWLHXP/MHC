@@ -19,8 +19,23 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
+    //初始化Bmob
+    [Bmob registerWithAppKey:@"df7dc327fd6e3c136d96a357d2281aa6"];
+    
     //创建窗口
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    // 显示窗口
+    [self.window makeKeyAndVisible];
+    
+    //判断是否登录
+    if ([BmobUser getCurrentUser]) {
+        //登录过显示主页
+        self.window.rootViewController = [[XPTabBarController alloc] init];
+    }else
+    {
+        self.window.rootViewController = [[XPWelcomeViewController alloc] init];
+    }
+
     
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     
@@ -36,8 +51,7 @@
         // 设置窗口的根控制器
         self.window.rootViewController = [[XPTabBarController alloc] init];
     }
-    // 显示窗口
-    [self.window makeKeyAndVisible];
+   
 
     return YES;
 }

@@ -7,6 +7,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="XPLoginViewController">
             <connections>
+                <outlet property="loginBtn" destination="QhX-Yk-HuM" id="lzt-Gi-O60"/>
+                <outlet property="nameTextField" destination="i7U-BC-9oZ" id="f3x-vI-mkt"/>
+                <outlet property="pwdTextField" destination="XQX-Qx-0Nu" id="TBH-6g-yUU"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -33,7 +36,7 @@
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入你的账号或邮箱" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="i7U-BC-9oZ">
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="dragon" placeholder="请输入你的账号或邮箱" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="i7U-BC-9oZ">
                     <rect key="frame" x="89" y="273" width="481" height="30"/>
                     <animations/>
                     <constraints>
@@ -61,7 +64,7 @@
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入你的密码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XQX-Qx-0Nu">
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="123456" placeholder="请输入你的密码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XQX-Qx-0Nu">
                     <rect key="frame" x="89" y="314" width="481" height="30"/>
                     <animations/>
                     <constraints>
@@ -100,6 +103,9 @@
                     <state key="normal" title="登录" backgroundImage="mine_login_autobt_back.png">
                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <connections>
+                        <action selector="login:" destination="-1" eventType="touchUpInside" id="zML-Gq-eDB"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YKN-KX-PGR">
                     <rect key="frame" x="30" y="410" width="540" height="30"/>
@@ -110,6 +116,9 @@
                     <state key="normal" title="游客进入" backgroundImage="mine_login_autobt_back.png">
                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <connections>
+                        <action selector="free:" destination="-1" eventType="touchUpInside" id="Hmk-HR-rCO"/>
+                    </connections>
                 </button>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="login_background.png" translatesAutoresizingMaskIntoConstraints="NO" id="0WO-Wo-LPr">
                     <rect key="frame" x="30" y="476" width="100" height="1"/>

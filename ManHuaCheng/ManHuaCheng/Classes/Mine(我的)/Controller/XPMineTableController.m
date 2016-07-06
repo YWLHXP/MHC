@@ -17,8 +17,10 @@
 #import "XPNavigationController.h"
 #import "HLActionSheet.h"
 #import "XPFileDirectoryViewController.h"
+#import "XPMyWordViewController.h"
 
 @interface XPMineTableController ()
+@property (weak, nonatomic) IBOutlet UILabel *nickNameLabel;
 @property (strong, nonatomic) IBOutlet UITableViewCell *loginOrRegister;
 @property (strong, nonatomic) IBOutlet UITableViewCell *myAccount;
 @property (strong, nonatomic) IBOutlet UITableViewCell *myTopic;
@@ -28,6 +30,7 @@
 @property (strong, nonatomic) IBOutlet UITableViewCell *novelRoom;
 @property (strong, nonatomic) IBOutlet UITableViewCell *invate;
 @property (strong, nonatomic) IBOutlet UITableViewCell *about;
+@property (strong, nonatomic) IBOutlet UITableViewCell *alerdyLogin;
 
 @end
 
@@ -41,12 +44,14 @@
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"nav_reader_set"] style:UIBarButtonItemStylePlain target:self action:@selector(set)];
     //去掉分割线
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-    
+    //获取用户名
+    self.nickNameLabel.text = [BmobUser getCurrentUser].username;
 }
 
 -(void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+    [self.tableView reloadData];
     self.navigationController.navigationBar.tintColor = [UIColor colorWithRed:110/255.0 green:111/255.0 blue:112/255.0 alpha:1];
 }
 
@@ -94,13 +99,22 @@
     }
     switch (indexPath.section) {
         case 0:
-            return self.loginOrRegister;
+        {
+            if ([BmobUser getCurrentUser]) {
+                return self.alerdyLogin;
+            }else
+            {
+                return self.loginOrRegister;
+            }
+        }
             break;
         case 1:
             if (indexPath.row == 0) {
+               
                 return self.myAccount;
             }else
             {
+                
                 return self.myTopic;
             }
             break;
@@ -135,21 +149,36 @@
     switch (indexPath.section) {
         case 0:
         {
-            XPLoginViewController *login = [XPLoginViewController new];
-            [self.navigationController pushViewController:login animated:YES];
+            if ([BmobUser getCurrentUser]) {
+                NSLog(@"此功能暂未实现，敬请期待哦~");
+            }else
+            {
+                XPLoginViewController *login = [XPLoginViewController new];
+                [self.navigationController pushViewController:login animated:YES];
+            }
         }
             break;
         case 1:
         {
             if (indexPath.row == 0) {
-                [self.navigationController pushViewController:[XPLoginViewController new] animated:YES];
-                [self showTooltip:@"登录后再去账号中心哦"];
+                if ([BmobUser getCurrentUser]) {
+                    
+                }else
+                {
+                    [self.navigationController pushViewController:[XPLoginViewController new] animated:YES];
+                    [self showTooltip:@"登录后再去账号中心哦"];
+                }
 
             }else
             {
-                [self showTooltip:@"登录后再去我的话题哦"];
-
-                 [self.navigationController pushViewController:[XPLoginViewController new] animated:YES];
+                if ([BmobUser getCurrentUser]) {
+                    [self.navigationController pushViewController:[XPMyWordViewController new] animated:YES];
+                }else
+                {
+                    [self showTooltip:@"登录后再去我的话题哦"];
+                    
+                    [self.navigationController pushViewController:[XPLoginViewController new] animated:YES];
+                }
             }
         }
             break;

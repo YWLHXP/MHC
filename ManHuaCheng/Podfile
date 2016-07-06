@@ -4,4 +4,5 @@ target 'ManHuaCheng' do
     pod 'MBProgressHUD'
     pod 'YYText'
     pod 'JSONModel'
+    pod 'BmobSDK'
 end

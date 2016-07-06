@@ -8,12 +8,14 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="XPMineTableController">
             <connections>
                 <outlet property="about" destination="EUE-DJ-KyA" id="ajp-ff-WGp"/>
+                <outlet property="alerdyLogin" destination="Wei-l0-bD5" id="IvJ-EC-pdg"/>
                 <outlet property="bookBack" destination="uCv-rO-xfu" id="wx8-FZ-5LJ"/>
                 <outlet property="invate" destination="dXQ-Fe-ER5" id="qIn-hA-Pq0"/>
                 <outlet property="localRead" destination="vZv-4Y-Gw5" id="Tzh-YV-kMZ"/>
                 <outlet property="loginOrRegister" destination="9U2-sC-JUM" id="LWs-9X-Z1b"/>
                 <outlet property="myAccount" destination="Ai0-fh-KV9" id="Sc1-6c-9wM"/>
                 <outlet property="myTopic" destination="caq-Ou-wnl" id="eqe-RY-UZF"/>
+                <outlet property="nickNameLabel" destination="jGz-gP-2ra" id="eQJ-GI-aY7"/>
                 <outlet property="novelRoom" destination="YDd-bS-izf" id="0I4-J0-acP"/>
                 <outlet property="shareToFriends" destination="c96-Wh-GXd" id="W55-3b-SKr"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -246,16 +248,95 @@
             <animations/>
             <point key="canvasLocation" x="886" y="865"/>
         </tableViewCell>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="cell" rowHeight="74" id="Wei-l0-bD5">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="74"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Wei-l0-bD5" id="tmU-3I-VSa">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="73"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mine_icon_big_sel.png" translatesAutoresizingMaskIntoConstraints="NO" id="Xum-ZE-eGO">
+                        <rect key="frame" x="8" y="12" width="50" height="50"/>
+                        <animations/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="50" id="917-Qm-cWm"/>
+                            <constraint firstAttribute="width" constant="50" id="F7x-w7-eKx"/>
+                        </constraints>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mine_vip_gray.png" translatesAutoresizingMaskIntoConstraints="NO" id="tIC-es-Mse">
+                        <rect key="frame" x="28" y="43" width="30" height="15"/>
+                        <animations/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="30" id="ScV-ip-MgH"/>
+                            <constraint firstAttribute="height" constant="15" id="jcp-qQ-949"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jGz-gP-2ra">
+                        <rect key="frame" x="58" y="14" width="63" height="21"/>
+                        <animations/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="0pv-En-tMW"/>
+                            <constraint firstAttribute="width" constant="63" id="Ly2-PJ-1dI"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="这个人很懒，没有留下什么话" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Yh-xK-Qoc">
+                        <rect key="frame" x="58" y="41" width="194" height="21"/>
+                        <animations/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="GJJ-sX-va6"/>
+                            <constraint firstAttribute="width" constant="194" id="PNY-xy-p9c"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H1A-D2-R5T">
+                        <rect key="frame" x="265" y="15" width="45" height="20"/>
+                        <animations/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="Osj-yk-46G"/>
+                            <constraint firstAttribute="width" constant="45" id="dIj-L9-K5l"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <state key="normal" title="已签到">
+                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                    </button>
+                </subviews>
+                <animations/>
+                <constraints>
+                    <constraint firstItem="3Yh-xK-Qoc" firstAttribute="leading" secondItem="tIC-es-Mse" secondAttribute="trailing" id="0mW-iB-Orq"/>
+                    <constraint firstAttribute="bottom" secondItem="tIC-es-Mse" secondAttribute="bottom" constant="15" id="85T-0g-Zzk"/>
+                    <constraint firstItem="tIC-es-Mse" firstAttribute="leading" secondItem="tmU-3I-VSa" secondAttribute="leading" constant="28" id="9dc-jU-Bmu"/>
+                    <constraint firstItem="jGz-gP-2ra" firstAttribute="leading" secondItem="Xum-ZE-eGO" secondAttribute="trailing" id="Cgm-zr-kZp"/>
+                    <constraint firstItem="Xum-ZE-eGO" firstAttribute="leading" secondItem="tmU-3I-VSa" secondAttribute="leading" constant="8" id="LXi-xJ-NnV"/>
+                    <constraint firstItem="jGz-gP-2ra" firstAttribute="top" secondItem="tmU-3I-VSa" secondAttribute="top" constant="14" id="SCR-SJ-7bo"/>
+                    <constraint firstAttribute="bottom" secondItem="3Yh-xK-Qoc" secondAttribute="bottom" constant="11" id="WzF-5f-Fnq"/>
+                    <constraint firstItem="Xum-ZE-eGO" firstAttribute="top" secondItem="tmU-3I-VSa" secondAttribute="top" constant="12" id="dxP-2M-Spw"/>
+                    <constraint firstAttribute="bottom" secondItem="Xum-ZE-eGO" secondAttribute="bottom" constant="11" id="kVX-M2-OQ7"/>
+                    <constraint firstAttribute="trailing" secondItem="H1A-D2-R5T" secondAttribute="trailing" constant="10" id="lG0-a1-P79"/>
+                    <constraint firstItem="H1A-D2-R5T" firstAttribute="top" secondItem="tmU-3I-VSa" secondAttribute="top" constant="15" id="msO-V1-pkh"/>
+                </constraints>
+            </tableViewCellContentView>
+            <animations/>
+            <point key="canvasLocation" x="891" y="19"/>
+        </tableViewCell>
     </objects>
     <resources>
         <image name="mine_about.png" width="37" height="37"/>
         <image name="mine_app.png" width="37" height="37"/>
         <image name="mine_feedback.png" width="37" height="37"/>
         <image name="mine_icon_big_nor.png" width="98" height="98"/>
+        <image name="mine_icon_big_sel.png" width="98" height="98"/>
         <image name="mine_localread.png" width="64" height="64"/>
         <image name="mine_novel.png" width="37" height="37"/>
         <image name="mine_share.png" width="37" height="37"/>
         <image name="mine_topic.png" width="37" height="37"/>
         <image name="mine_usercenter.png" width="46" height="46"/>
+        <image name="mine_vip_gray.png" width="60" height="30"/>
     </resources>
 </document>
