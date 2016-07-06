@@ -276,7 +276,6 @@
 		D850090C1D2251730007D0F6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D850090B1D2251730007D0F6 /* main.m */; };
 		D85009171D2251730007D0F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D85009161D2251730007D0F6 /* Assets.xcassets */; };
 		D850091A1D2251730007D0F6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D85009181D2251730007D0F6 /* LaunchScreen.storyboard */; };
-		D85009261D225FA70007D0F6 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = D85009251D225FA70007D0F6 /* Podfile */; };
 		D85009421D2262FA0007D0F6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D85009361D2262FA0007D0F6 /* AppDelegate.m */; };
 		D8500EAA1D22644B0007D0F6 /* AppIcon29x29.png in Resources */ = {isa = PBXBuildFile; fileRef = D8500E961D22644B0007D0F6 /* AppIcon29x29.png */; };
 		D8500EAB1D22644B0007D0F6 /* AppIcon29x29@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D8500E971D22644B0007D0F6 /* AppIcon29x29@2x.png */; };
@@ -361,6 +360,7 @@
 		D8D9305B1D279F1600E4BC9A /* sns_icon_24@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D8D9304F1D279F1600E4BC9A /* sns_icon_24@2x.png */; };
 		D8D9305C1D279F1600E4BC9A /* sns_icon_37.png in Resources */ = {isa = PBXBuildFile; fileRef = D8D930501D279F1600E4BC9A /* sns_icon_37.png */; };
 		D8D9305D1D279F1600E4BC9A /* sns_icon_37@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D8D930511D279F1600E4BC9A /* sns_icon_37@2x.png */; };
+		D8EEEA5F1D2CFB0A00A16202 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = D85009251D225FA70007D0F6 /* Podfile */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -1802,7 +1802,6 @@
 				D8500EE01D2267830007D0F6 /* 1.jpg in Resources */,
 				D82C9D6B1D2742CC00486433 /* mine_novel@2x.png in Resources */,
 				D82C9DB91D27430F00486433 /* AppIcon76x76@2x~ipad.png in Resources */,
-				D85009261D225FA70007D0F6 /* Podfile in Resources */,
 				D82C9D171D2742CC00486433 /* 11.jpg in Resources */,
 				D82C9DA91D27430F00486433 /* AppIcon29x29@2x.png in Resources */,
 				D8D9305B1D279F1600E4BC9A /* sns_icon_24@2x.png in Resources */,
@@ -1886,6 +1885,7 @@
 				D82C9D4C1D2742CC00486433 /* 1.jpg in Resources */,
 				D82C9D8F1D2742CC00486433 /* NewTab5_nor@2x.png in Resources */,
 				D82C9D561D2742CC00486433 /* launch_iphone6p_4@2x.jpg in Resources */,
+				D8EEEA5F1D2CFB0A00A16202 /* Podfile in Resources */,
 				D844100A1D2CF4EC00187767 /* mine_topic_nodata.png in Resources */,
 				D89C0C481D254DF7004A3DBC /* circle_unselect_grade.png in Resources */,
 				D805DAA21D23BA81000D5EA0 /* XPForgetPasswordViewController.xib in Resources */,
