@@ -16,6 +16,7 @@
 #import "XPCartoonViewController.h"
 #import "XPNavigationController.h"
 #import "HLActionSheet.h"
+#import "XPFileDirectoryViewController.h"
 
 @interface XPMineTableController ()
 @property (strong, nonatomic) IBOutlet UITableViewCell *loginOrRegister;
@@ -52,7 +53,7 @@
 -(void)viewWillDisappear:(BOOL)animated
 {
     [super viewWillDisappear:animated];
-    [self.tabBarController.tabBar setHidden:YES];
+    //[self.tabBarController.tabBar setHidden:YES];
 }
 
 - (void)set
@@ -159,9 +160,26 @@
                 NSArray *imageNames = @[@"sns_icon_22",@"sns_icon_1",@"sns_icon_23",@"sns_icon_6",@"sns_icon_24",@"sns_icon_37"];
                 HLActionSheet *sheet = [[HLActionSheet alloc] initWithTitles:titles iconNames:imageNames];
                 [sheet showActionSheetWithClickBlock:^(int btnIndex) {
-                    NSLog(@"btnIndex:%d",btnIndex);
+                    if (btnIndex == 0) {
+                        NSLog(@"亲,你还没有安装微信App哦~");
+                    }else if (btnIndex == 1)
+                    {
+                        NSLog(@"亲,你还没有安装新浪微博App哦~");
+                    }else if (btnIndex == 2)
+                    {
+                         NSLog(@"亲,你还没有安装微信,无法使用朋友圈");
+                    }else if(btnIndex == 3)
+                    {
+                         NSLog(@"亲,你还没有安装QQ,无法使用QQ空间");
+                    }else if(btnIndex == 4)
+                    {
+                         NSLog(@"亲,你还没有安装QQ哦~");
+                    }else{
+                        NSLog(@"亲,你还没有安装微信,无法使用微信收藏");
+                    }
+                    
                 } cancelBlock:^{
-                    NSLog(@"取消");
+                    NSLog(@"亲，你已经取消分享了哦~");
                 }];
 
             }else
@@ -173,6 +191,7 @@
         case 3:
         {
             if (indexPath.row == 0) {
+                [self.navigationController pushViewController:[XPFileDirectoryViewController new] animated:YES];
                 
             }else if(indexPath.row == 1)
             {

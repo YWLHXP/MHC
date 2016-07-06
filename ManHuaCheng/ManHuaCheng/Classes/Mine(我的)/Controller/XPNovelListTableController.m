@@ -31,7 +31,7 @@
     [manager GET:path parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:responseObject options:0 error:nil];
       
-        NSLog(@"%@", dic);
+//        NSLog(@"%@", dic);
         NSArray *novel = dic[@"books"];
         for (NSDictionary *dicBook in novel) {
             XPNovel *n = [[XPNovel alloc] initWithDic:dicBook];
