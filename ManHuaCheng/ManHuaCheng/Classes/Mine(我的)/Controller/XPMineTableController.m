@@ -18,6 +18,7 @@
 #import "HLActionSheet.h"
 #import "XPFileDirectoryViewController.h"
 #import "XPMyWordViewController.h"
+#import "XPMyAccountTableViewController.h"
 
 @interface XPMineTableController ()
 @property (weak, nonatomic) IBOutlet UILabel *nickNameLabel;
@@ -162,7 +163,7 @@
         {
             if (indexPath.row == 0) {
                 if ([BmobUser getCurrentUser]) {
-                    
+                    [self.navigationController pushViewController:[XPMyAccountTableViewController new] animated:YES];
                 }else
                 {
                     [self.navigationController pushViewController:[XPLoginViewController new] animated:YES];
