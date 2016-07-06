@@ -734,6 +734,30 @@
     if (scrollView == self.mainCollectionView) {
         NSLog(@"%lf",self.mainCollectionView.contentOffset.x);
         self.LImageView.frame = CGRectMake(self.mainCollectionView.contentOffset.x/4, self.size.height-10, (XPScreenWidth-3)/4, 10);
+        if (self.LImageView.frame.origin.x<=self.rankingListButton.frame.origin.x&&self.LImageView.frame.origin.x>=self.recomendButton.frame.origin.x+self.recomendButton.frame.size.width) {
+            self.rankingListButton.selected = YES;
+            self.recomendButton.selected = NO;
+            self.creatButton.selected = NO;
+            self.specialButton.selected = NO;
+        }
+        if (self.LImageView.frame.origin.x<=self.creatButton.frame.origin.x&&self.LImageView.frame.origin.x>=self.rankingListButton.frame.origin.x+self.rankingListButton.frame.size.width) {
+            self.creatButton.selected = YES;
+            self.recomendButton.selected = NO;
+            self.rankingListButton.selected = NO;
+            self.specialButton.selected = NO;
+        }
+        if (self.LImageView.frame.origin.x<=self.specialButton.frame.origin.x&&self.LImageView.frame.origin.x>=self.creatButton.frame.origin.x+self.creatButton.frame.size.width) {
+            self.specialButton.selected = YES;
+            self.recomendButton.selected = NO;
+            self.rankingListButton.selected = NO;
+            self.creatButton.selected = NO;
+        }
+        if (self.LImageView.frame.origin.x<=self.recomendButton.frame.origin.x) {
+            self.recomendButton.selected = YES;
+            self.specialButton.selected = NO;
+            self.rankingListButton.selected = NO;
+            self.creatButton.selected = NO;
+        }
     }
     if (scrollView == self.ADRecomendCollectionView) {
         int halfX = self.ADRecomendCollectionView.frame.size.width/2;
