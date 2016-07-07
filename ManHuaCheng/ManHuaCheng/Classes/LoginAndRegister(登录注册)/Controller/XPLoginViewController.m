@@ -16,6 +16,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *loginBtn;
 @property (weak, nonatomic) IBOutlet UITextField *nameTextField;
 @property (weak, nonatomic) IBOutlet UITextField *pwdTextField;
+@property (nonatomic,strong)BmobUser *user;
 @end
 
 @implementation XPLoginViewController
@@ -46,7 +47,20 @@
     }];
 }
 - (IBAction)free:(id)sender {
-    NSLog(@"该功能暂未实现，敬请期待哦~");
+    self.user = [[BmobUser alloc] init];
+    self.user.username = @"游客577东城99";
+    self.user.password = @"123456";
+    [self.user signUpInBackgroundWithBlock:^(BOOL succeeded, NSError * _Nullable error) {
+        if (succeeded) {
+            NSLog(@"注册成功!");
+            AppDelegate *app = (AppDelegate*)[UIApplication sharedApplication].delegate;
+            app.window.rootViewController = [[XPTabBarController alloc] init];
+            
+        }else{
+            NSLog(@"%@",error);
+        }
+    }];
+
 }
 
 - (void)viewDidLoad {
